@@ -14,6 +14,9 @@
 		ACB509F0283CCD43005C07FD /* HomeMoneyManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509EF283CCD43005C07FD /* HomeMoneyManagementTests.swift */; };
 		ACB509FA283CCD43005C07FD /* HomeMoneyManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509F9283CCD43005C07FD /* HomeMoneyManagementUITests.swift */; };
 		ACB509FC283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */; };
+		ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */; };
+		ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */; };
+		ACB50A0F283CE774005C07FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0E283CE774005C07FD /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		ACB509F5283CCD43005C07FD /* HomeMoneyManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeMoneyManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB509F9283CCD43005C07FD /* HomeMoneyManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementUITests.swift; sourceTree = "<group>"; };
 		ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlashScreen.swift; sourceTree = "<group>"; };
+		ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		ACB50A0E283CE774005C07FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 				ACB509DD283CCD43005C07FD /* HomeMoneyManagement */,
 				ACB509EE283CCD43005C07FD /* HomeMoneyManagementTests */,
 				ACB509F8283CCD43005C07FD /* HomeMoneyManagementUITests */,
+				ACB509E2283CCD43005C07FD /* Assets.xcassets */,
 				ACB509DC283CCD43005C07FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,10 +101,11 @@
 		ACB509DD283CCD43005C07FD /* HomeMoneyManagement */ = {
 			isa = PBXGroup;
 			children = (
+				ACB50A0D283CE728005C07FD /* Model */,
 				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
 				ACB509E0283CCD43005C07FD /* ContentView.swift */,
-				ACB509E2283CCD43005C07FD /* Assets.xcassets */,
 				ACB509E4283CCD43005C07FD /* Preview Content */,
+				ACB50A0C283CE6E2005C07FD /* View */,
 			);
 			path = HomeMoneyManagement;
 			sourceTree = "<group>";
@@ -125,6 +133,23 @@
 				ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */,
 			);
 			path = HomeMoneyManagementUITests;
+			sourceTree = "<group>";
+		};
+		ACB50A0C283CE6E2005C07FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */,
+				ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACB50A0D283CE728005C07FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACB50A0E283CE774005C07FD /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */,
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
+				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
+				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
 				ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
