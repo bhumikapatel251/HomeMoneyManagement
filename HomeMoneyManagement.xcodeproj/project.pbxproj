@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */; };
+		ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509E0283CCD43005C07FD /* ContentView.swift */; };
+		ACB509E3283CCD43005C07FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB509E2283CCD43005C07FD /* Assets.xcassets */; };
+		ACB509E6283CCD43005C07FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB509E5283CCD43005C07FD /* Preview Assets.xcassets */; };
+		ACB509F0283CCD43005C07FD /* HomeMoneyManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509EF283CCD43005C07FD /* HomeMoneyManagementTests.swift */; };
+		ACB509FA283CCD43005C07FD /* HomeMoneyManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509F9283CCD43005C07FD /* HomeMoneyManagementUITests.swift */; };
+		ACB509FC283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACB509EC283CCD43005C07FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACB509D3283CCD43005C07FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACB509DA283CCD43005C07FD;
+			remoteInfo = HomeMoneyManagement;
+		};
+		ACB509F6283CCD43005C07FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACB509D3283CCD43005C07FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACB509DA283CCD43005C07FD;
+			remoteInfo = HomeMoneyManagement;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMoneyManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementApp.swift; sourceTree = "<group>"; };
+		ACB509E0283CCD43005C07FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACB509E2283CCD43005C07FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACB509E5283CCD43005C07FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACB509EB283CCD43005C07FD /* HomeMoneyManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeMoneyManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB509EF283CCD43005C07FD /* HomeMoneyManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementTests.swift; sourceTree = "<group>"; };
+		ACB509F5283CCD43005C07FD /* HomeMoneyManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeMoneyManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB509F9283CCD43005C07FD /* HomeMoneyManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementUITests.swift; sourceTree = "<group>"; };
+		ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACB509D8283CCD43005C07FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB509E8283CCD43005C07FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB509F2283CCD43005C07FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACB509D2283CCD43005C07FD = {
+			isa = PBXGroup;
+			children = (
+				ACB509DD283CCD43005C07FD /* HomeMoneyManagement */,
+				ACB509EE283CCD43005C07FD /* HomeMoneyManagementTests */,
+				ACB509F8283CCD43005C07FD /* HomeMoneyManagementUITests */,
+				ACB509DC283CCD43005C07FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACB509DC283CCD43005C07FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */,
+				ACB509EB283CCD43005C07FD /* HomeMoneyManagementTests.xctest */,
+				ACB509F5283CCD43005C07FD /* HomeMoneyManagementUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACB509DD283CCD43005C07FD /* HomeMoneyManagement */ = {
+			isa = PBXGroup;
+			children = (
+				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
+				ACB509E0283CCD43005C07FD /* ContentView.swift */,
+				ACB509E2283CCD43005C07FD /* Assets.xcassets */,
+				ACB509E4283CCD43005C07FD /* Preview Content */,
+			);
+			path = HomeMoneyManagement;
+			sourceTree = "<group>";
+		};
+		ACB509E4283CCD43005C07FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ACB509E5283CCD43005C07FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACB509EE283CCD43005C07FD /* HomeMoneyManagementTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACB509EF283CCD43005C07FD /* HomeMoneyManagementTests.swift */,
+			);
+			path = HomeMoneyManagementTests;
+			sourceTree = "<group>";
+		};
+		ACB509F8283CCD43005C07FD /* HomeMoneyManagementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACB509F9283CCD43005C07FD /* HomeMoneyManagementUITests.swift */,
+				ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */,
+			);
+			path = HomeMoneyManagementUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACB509DA283CCD43005C07FD /* HomeMoneyManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB509FF283CCD43005C07FD /* Build configuration list for PBXNativeTarget "HomeMoneyManagement" */;
+			buildPhases = (
+				ACB509D7283CCD43005C07FD /* Sources */,
+				ACB509D8283CCD43005C07FD /* Frameworks */,
+				ACB509D9283CCD43005C07FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeMoneyManagement;
+			productName = HomeMoneyManagement;
+			productReference = ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACB509EA283CCD43005C07FD /* HomeMoneyManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB50A02283CCD43005C07FD /* Build configuration list for PBXNativeTarget "HomeMoneyManagementTests" */;
+			buildPhases = (
+				ACB509E7283CCD43005C07FD /* Sources */,
+				ACB509E8283CCD43005C07FD /* Frameworks */,
+				ACB509E9283CCD43005C07FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACB509ED283CCD43005C07FD /* PBXTargetDependency */,
+			);
+			name = HomeMoneyManagementTests;
+			productName = HomeMoneyManagementTests;
+			productReference = ACB509EB283CCD43005C07FD /* HomeMoneyManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACB509F4283CCD43005C07FD /* HomeMoneyManagementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB50A05283CCD43005C07FD /* Build configuration list for PBXNativeTarget "HomeMoneyManagementUITests" */;
+			buildPhases = (
+				ACB509F1283CCD43005C07FD /* Sources */,
+				ACB509F2283CCD43005C07FD /* Frameworks */,
+				ACB509F3283CCD43005C07FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACB509F7283CCD43005C07FD /* PBXTargetDependency */,
+			);
+			name = HomeMoneyManagementUITests;
+			productName = HomeMoneyManagementUITests;
+			productReference = ACB509F5283CCD43005C07FD /* HomeMoneyManagementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACB509D3283CCD43005C07FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					ACB509DA283CCD43005C07FD = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					ACB509EA283CCD43005C07FD = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = ACB509DA283CCD43005C07FD;
+					};
+					ACB509F4283CCD43005C07FD = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = ACB509DA283CCD43005C07FD;
+					};
+				};
+			};
+			buildConfigurationList = ACB509D6283CCD43005C07FD /* Build configuration list for PBXProject "HomeMoneyManagement" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACB509D2283CCD43005C07FD;
+			productRefGroup = ACB509DC283CCD43005C07FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACB509DA283CCD43005C07FD /* HomeMoneyManagement */,
+				ACB509EA283CCD43005C07FD /* HomeMoneyManagementTests */,
+				ACB509F4283CCD43005C07FD /* HomeMoneyManagementUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACB509D9283CCD43005C07FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB509E6283CCD43005C07FD /* Preview Assets.xcassets in Resources */,
+				ACB509E3283CCD43005C07FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB509E9283CCD43005C07FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB509F3283CCD43005C07FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACB509D7283CCD43005C07FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
+				ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB509E7283CCD43005C07FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB509F0283CCD43005C07FD /* HomeMoneyManagementTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB509F1283CCD43005C07FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB509FA283CCD43005C07FD /* HomeMoneyManagementUITests.swift in Sources */,
+				ACB509FC283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACB509ED283CCD43005C07FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACB509DA283CCD43005C07FD /* HomeMoneyManagement */;
+			targetProxy = ACB509EC283CCD43005C07FD /* PBXContainerItemProxy */;
+		};
+		ACB509F7283CCD43005C07FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACB509DA283CCD43005C07FD /* HomeMoneyManagement */;
+			targetProxy = ACB509F6283CCD43005C07FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ACB509FD283CCD43005C07FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACB509FE283CCD43005C07FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACB50A00283CCD43005C07FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeMoneyManagement/Preview Content\"";
+				DEVELOPMENT_TEAM = LU893QGJWJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.HomeMoneyManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACB50A01283CCD43005C07FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeMoneyManagement/Preview Content\"";
+				DEVELOPMENT_TEAM = LU893QGJWJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.HomeMoneyManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ACB50A03283CCD43005C07FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LU893QGJWJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.HomeMoneyManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeMoneyManagement.app/HomeMoneyManagement";
+			};
+			name = Debug;
+		};
+		ACB50A04283CCD43005C07FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LU893QGJWJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.HomeMoneyManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeMoneyManagement.app/HomeMoneyManagement";
+			};
+			name = Release;
+		};
+		ACB50A06283CCD43005C07FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LU893QGJWJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.HomeMoneyManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HomeMoneyManagement;
+			};
+			name = Debug;
+		};
+		ACB50A07283CCD43005C07FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LU893QGJWJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.HomeMoneyManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HomeMoneyManagement;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACB509D6283CCD43005C07FD /* Build configuration list for PBXProject "HomeMoneyManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB509FD283CCD43005C07FD /* Debug */,
+				ACB509FE283CCD43005C07FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB509FF283CCD43005C07FD /* Build configuration list for PBXNativeTarget "HomeMoneyManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB50A00283CCD43005C07FD /* Debug */,
+				ACB50A01283CCD43005C07FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB50A02283CCD43005C07FD /* Build configuration list for PBXNativeTarget "HomeMoneyManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB50A03283CCD43005C07FD /* Debug */,
+				ACB50A04283CCD43005C07FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB50A05283CCD43005C07FD /* Build configuration list for PBXNativeTarget "HomeMoneyManagementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB50A06283CCD43005C07FD /* Debug */,
+				ACB50A07283CCD43005C07FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACB509D3283CCD43005C07FD /* Project object */;
+}
