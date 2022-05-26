@@ -23,33 +23,32 @@ struct FirstScreen: View {
                     }
                     .frame(maxWidth: .infinity,  alignment: .leading)
                     NavigationLink{
-                        filteredDetailView()
+                       FilteredDetailView()
                             .environmentObject(expenseViewModel)
                     } label: {
-                        Image(systemName: "book")
+                        Image(systemName: "hexagon.fill")
                             .foregroundColor(.gray)
-//                                   .overlay(content: {
-//                                       Circle()
-//                                           .stroke(.white,lineWidth: 2)
-//                                           .padding(7)
-//                                   })
+                                   .overlay(content: {
+                                       Circle()
+                                           .stroke(.white,lineWidth: 2)
+                                           .padding(7)
+                                   })
                             .frame(width: 30, height: 30)
                             .background(Color.white,in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
-                            
-             }
-                    
-                    Button{
-                               
-                    } label: {
-                               Image(systemName: "magnifyingglass")
-                                   .foregroundColor(.gray)
-                                   
-                                   .frame(width: 30, height: 30)
-                                   .background(Color.white,in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-                                   .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
-                                   
                     }
+                    
+//                    Button{
+//
+//                    } label: {
+//                               Image(systemName: "magnifyingglass")
+//                                   .foregroundColor(.gray)
+//
+//                                   .frame(width: 30, height: 30)
+//                                   .background(Color.white,in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+//                                   .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
+//
+//                    }
                     Button{
                                
                     } label: {
@@ -61,14 +60,14 @@ struct FirstScreen: View {
                     }
 
                 }
-                ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing:18){
-                                ForEach(TaskType.allCases,id: \.self){type in
-                                    TaskTypeView(type: type)
-                                }
-                            }
-                            .padding(.horizontal, 25)
-                        }
+//                ScrollView(.horizontal, showsIndicators: false){
+//                            HStack(spacing:18){
+//                                ForEach(TaskType.allCases,id: \.self){type in
+//                                    TaskTypeView(type: type)
+//                                }
+//                            }
+//                            .padding(.horizontal, 25)
+//                        }
                         .padding(.top, 28)
                            
                     ExpenseCardView()
@@ -197,18 +196,18 @@ struct FirstScreen: View {
         .padding(.top,05)
     }
     //Task
-    @ViewBuilder
-    func TaskTypeView(type: TaskType)->some View{
-        Button {
-                  
-        }label: {
-            Text(type.rawValue)
-                .font(.system(size: 10))
-                .fontWeight(.semibold)
-                .foregroundColor(.gray)
-        
-        }
-    }
+//    @ViewBuilder
+//    func TaskTypeView(type: TaskType)->some View{
+//        Button {
+//                  
+//        }label: {
+//            Text(type.rawValue)
+//                .font(.system(size: 10))
+//                .fontWeight(.semibold)
+//                .foregroundColor(.gray)
+//        
+//        }
+//    }
     
 }
 struct FirstScreen_Previews: PreviewProvider {

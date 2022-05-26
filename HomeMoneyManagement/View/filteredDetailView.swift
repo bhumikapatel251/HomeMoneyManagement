@@ -1,5 +1,5 @@
 //
-//  filteredDetailView.swift
+//  FilteredDetailView.swift
 //  HomeMoneyManagement
 //
 //  Created by Bhumika Patel on 25/05/22.
@@ -7,15 +7,22 @@
 
 import SwiftUI
 
-struct filteredDetailView: View {
+struct FilteredDetailView: View {
     @EnvironmentObject var expenseViewModel: ExpenseViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false){
+                
+        }
+        .navigationBarHidden(true)
+        .background{
+            Color("LightBlack")
+                .ignoresSafeArea()
+        }
     }
 }
 
-struct filteredDetailView_Previews: PreviewProvider {
+struct FilteredDetailView_Previews: PreviewProvider {
     static var previews: some View {
-       FirstScreen()
+        ContentView()
     }
 }
