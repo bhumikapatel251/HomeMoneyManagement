@@ -55,6 +55,7 @@ struct ExpenseCard: View {
                         Text(expenseViewModel.convertExpenseToCurrency(expenses: expenseViewModel.expense,type: .income))
                             .font(.callout)
                             .fontWeight(.semibold)
+                            
                             .lineLimit(1)
                             .fixedSize()
                     }.padding(.leading,-1)
@@ -91,13 +92,15 @@ struct ExpenseCard: View {
                         
                         //expenses prices
                         Text(expenseViewModel.convertExpenseToCurrency(expenses: expenseViewModel.expense))
-                            .font(.system(size: 15, weight: .bold))
+                     
+                            .font(.callout)
+                            .fontWeight(.semibold)
                             .lineLimit(1)
-                            .padding(.bottom,5)
+                            .fixedSize()
                     }
                     .padding(.leading,-1)
                 }
-                .padding(.horizontal,5)
+                .padding(.horizontal,1)
                 .padding(.trailing)
                 .offset(y: 15)
             }
