@@ -16,6 +16,9 @@ class ExpenseViewModel: ObservableObject{
     // Expense/Income tabView
     @Published var tabName: ExpenseType = .expense
     
+    // filterview
+    @Published var showFilterView: Bool = false
+    
     init(){
         //fetching current month starting date
         let calendar = Calendar.current
