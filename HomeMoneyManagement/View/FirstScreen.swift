@@ -23,7 +23,7 @@ struct FirstScreen: View {
                     }
                     .frame(maxWidth: .infinity,  alignment: .leading)
                     NavigationLink{
-                       FilteredDetailView()
+                      FilteringDetailView()
                             .environmentObject(expenseViewModel)
                     } label: {
                         Image(systemName: "hexagon.fill")

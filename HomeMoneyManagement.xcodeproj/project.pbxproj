@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708C4283F834F0013F420 /* ExpenseCard.swift */; };
-		AC5708C7283F89F80013F420 /* FilteredDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708C6283F89F80013F420 /* FilteredDetailView.swift */; };
+		AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708CA283F94B30013F420 /* FilteringDetailView.swift */; };
 		AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576267283E01AE0050A4F4 /* TabCurveView.swift */; };
 		AC57626A283E03C60050A4F4 /* CustomTabCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576269283E03C60050A4F4 /* CustomTabCurve.swift */; };
 		AC57626D283E1A020050A4F4 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57626C283E1A020050A4F4 /* Expense.swift */; };
@@ -45,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		AC5708C4283F834F0013F420 /* ExpenseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCard.swift; sourceTree = "<group>"; };
-		AC5708C6283F89F80013F420 /* FilteredDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredDetailView.swift; sourceTree = "<group>"; };
+		AC5708CA283F94B30013F420 /* FilteringDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringDetailView.swift; sourceTree = "<group>"; };
 		AC576267283E01AE0050A4F4 /* TabCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurveView.swift; sourceTree = "<group>"; };
 		AC576269283E03C60050A4F4 /* CustomTabCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabCurve.swift; sourceTree = "<group>"; };
 		AC57626C283E1A020050A4F4 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 				ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */,
 				ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */,
 				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
-				AC5708C6283F89F80013F420 /* FilteredDetailView.swift */,
+				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,8 +335,8 @@
 				AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */,
 				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
 				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
-				AC5708C7283F89F80013F420 /* FilteredDetailView.swift in Sources */,
 				AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */,
+				AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */,
 				ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */,
 				AC57626A283E03C60050A4F4 /* CustomTabCurve.swift in Sources */,
 			);

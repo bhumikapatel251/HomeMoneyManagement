@@ -42,6 +42,10 @@ class ExpenseViewModel: ObservableObject{
         return convertNumberToPrice(value: value)
         
     }
+    // converting selected date to string
+    func convertDateToString()->String{
+        return startDate.formatted(date: .abbreviated, time: .omitted) + " - " + endDate.formatted(date: .abbreviated, time: .omitted)
+    }
     
     // converting number to price
     

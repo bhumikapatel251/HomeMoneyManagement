@@ -35,7 +35,7 @@ struct TransactionCardView: View {
                 Text(price)
                     .font(.callout)
                     .opacity(0.7)
-                    .foregroundColor(expense.type == .expense ? Color("Red") : Color("Green"))
+                    .foregroundColor(expense.type == .expense ? Color("Red") : Color("G2"))
                 Text(expense.date.formatted(date: .numeric, time: .omitted))
                     .foregroundColor(.black)
                     .font(.caption)
