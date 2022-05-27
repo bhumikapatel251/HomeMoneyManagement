@@ -84,9 +84,9 @@ struct NewExpense: View {
                         .padding(.leading,10)
                     
                 } icon: {
-                    Image(systemName: "list.bullet.ractangle.portrait.fill")
+                    Image(systemName: "doc.text.fill")
                         .font(.title3)
-                        .foregroundColor(.black)
+                        .foregroundColor(.gray)
                 }
                 .padding(.vertical, 20)
                 .padding(.horizontal, 30)
@@ -108,7 +108,7 @@ struct NewExpense: View {
                         .font(.title3)
                         .foregroundColor(.gray)
                 }
-                .padding(.vertical, 20)
+                .padding(.vertical, 15)
                 .padding(.horizontal, 30)
                 .background{
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -118,9 +118,39 @@ struct NewExpense: View {
               
                
             }
+            .frame(maxWidth: .infinity, alignment: .center)
+            
+            //Save
+            Button{
+                
+                
+            } label:{
+                Text("Save")
+                    .font(.title3)
+                    .fontWeight((.semibold))
+                    .padding(.vertical, 15)
+                    .frame(maxWidth: .infinity)
+                    .background{
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(
+                                .linearGradient(colors:[
+                                    Color("G4"),
+                                    Color("G5"),
+                                    Color("G5"),
+                                    Color("G4"),
+                                ], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            )
+                    }
+                    .foregroundColor(.white)
+                    .padding(.bottom,10)
+                
+            }
+            .disabled(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "")
+            .opacity(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "" ? 0.6 : 1)
+            .padding(.vertical)
         }
         
-        
+        .padding()
         .background{
             Color("BG")
                 .ignoresSafeArea()
