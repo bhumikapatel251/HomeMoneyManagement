@@ -55,8 +55,9 @@ struct FilteringDetailView: View {
                 
                 // Expense card view
                // ExpenseCard()
+                  //  .environmentObject(expenseViewModel)
+                CustomSegmentedView()
                     .environmentObject(expenseViewModel)
-                CustomSegmentedControl()
                     .padding(.top)
                 
                 // filter date and amount
@@ -150,45 +151,50 @@ struct FilteringDetailView: View {
         .animation(.easeInOut, value: expenseViewModel.showFilterView)
     }
     //Custom segmentation control
-    @ViewBuilder
-    func CustomSegmentedControl()->some View{
-        HStack(spacing: 0){
-            ForEach([ExpenseType.income,ExpenseType.expense],id: \.rawValue){tab in
-                Text(tab.rawValue)
-                    .fontWeight(.semibold)
-                    .foregroundColor(expenseViewModel.tabName == tab ? .white : .black)
-                    .opacity(expenseViewModel.tabName == tab ? 1 : 0.7)
-                    .padding(.vertical, 12)
-                    .frame(maxWidth: .infinity)
-                    .background{
-                        // Geomerty
-                        if expenseViewModel.tabName == tab{
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(
-                                    .linearGradient(colors:[
-                                        Color("G4"),
-                                        Color("G5"),
-                                        Color("G5"),
-                                        Color("G4"),
-                                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-                                .matchedGeometryEffect(id: "TAB", in: animation)
-                        }
-                        
-                    }
-                    .contentShape(Rectangle())
-                    .onTapGesture{
-                        withAnimation{expenseViewModel.tabName = tab}
-                    }
-                
-            }
-        }
-        .padding(5)
-        .background{
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(.white)
-        }
-    }
+//    @ViewBuilder
+//    func CustomSegmentedControl()->some View{
+//        HStack(spacing: 0){
+//            ForEach([ExpenseType.income,ExpenseType.expense],id: \.rawValue){tab in
+//                Text(tab.rawValue)
+//                    .fontWeight(.semibold)
+//                    .foregroundColor(expenseViewModel.tabName == tab ? .white : .black)
+//                    .opacity(expenseViewModel.tabName == tab ? 1 : 0.7)
+//                    .padding(.vertical, 12)
+//                    .frame(maxWidth: .infinity)
+//
+//                    .background{
+//                        // Geomerty
+//                        if expenseViewModel.tabName == tab{
+//                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+//
+//                                .fill(
+//                                    .linearGradient(colors:[
+//                                        Color("G4"),
+//                                        Color("G5"),
+//                                        Color("G5"),
+//                                        Color("G4"),
+//                                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
+//                                )
+////                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+////                                .strokeBorder(.red)
+//
+//                                .matchedGeometryEffect(id: "TAB", in: animation)
+//                        }
+//
+//                    }
+//                    .contentShape(Rectangle())
+//                    .onTapGesture{
+//                        withAnimation{expenseViewModel.tabName = tab}
+//                    }
+//
+//            }
+//        }
+//        .padding(5)
+//        .background{
+//            RoundedRectangle(cornerRadius: 10, style: .continuous)
+//                .fill(.white)
+//        }
+//    }
 }
 
 struct FilteringDetailView_Previews: PreviewProvider {

@@ -81,6 +81,12 @@ struct FirstScreen: View {
             Color("BG")
                 .ignoresSafeArea()
         }
+        .fullScreenCover(isPresented: $expenseViewModel.addNewExpense) {
+            
+        } content: {
+            NewExpense()
+                .environmentObject(expenseViewModel)
+        }
     }
     //Transaction
     @ViewBuilder

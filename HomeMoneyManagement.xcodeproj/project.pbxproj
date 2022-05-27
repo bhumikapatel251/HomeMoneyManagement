@@ -14,6 +14,8 @@
 		AC57626D283E1A020050A4F4 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57626C283E1A020050A4F4 /* Expense.swift */; };
 		AC57626F283E1CB50050A4F4 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */; };
 		AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576270283E3DE50050A4F4 /* TransactionCardView.swift */; };
+		AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761202840A9380032A8A1 /* NewExpense.swift */; };
+		AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */; };
 		ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */; };
 		ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509E0283CCD43005C07FD /* ContentView.swift */; };
 		ACB509E3283CCD43005C07FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB509E2283CCD43005C07FD /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		AC57626C283E1A020050A4F4 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		AC576270283E3DE50050A4F4 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		AC7761202840A9380032A8A1 /* NewExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpense.swift; sourceTree = "<group>"; };
+		AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
 		ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMoneyManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementApp.swift; sourceTree = "<group>"; };
 		ACB509E0283CCD43005C07FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5708C4283F834F0013F420 /* ExpenseCard.swift */,
+				AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */,
 			);
 			path = GradientView;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */,
 				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
 				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
+				AC7761202840A9380032A8A1 /* NewExpense.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,12 +334,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC57626D283E1A020050A4F4 /* Expense.swift in Sources */,
+				AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */,
 				AC57626F283E1CB50050A4F4 /* ExpenseViewModel.swift in Sources */,
 				ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */,
 				AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */,
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
 				AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */,
 				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
+				AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */,
 				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
 				AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */,
 				AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */,
