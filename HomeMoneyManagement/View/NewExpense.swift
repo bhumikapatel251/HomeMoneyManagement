@@ -97,6 +97,24 @@ struct NewExpense: View {
                 .padding(.top, 25)
                 
                  //DAte
+                Label {
+                    DatePicker.init("", selection: $expenseViewModel.date,in: Date.distantPast...Date(), displayedComponents: [.date])
+                        .datePickerStyle(.compact)
+                        .labelsHidden()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading,10)
+                } icon: {
+                    Image(systemName: "calendar")
+                        .font(.title3)
+                        .foregroundColor(.gray)
+                }
+                .padding(.vertical, 20)
+                .padding(.horizontal, 30)
+                .background{
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(.white)
+                }
+                .padding(.top, 25)
               
                
             }
