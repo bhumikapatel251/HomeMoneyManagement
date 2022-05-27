@@ -65,5 +65,18 @@ class ExpenseViewModel: ObservableObject{
         
         return formatter.string(from: .init(value: value)) ?? "$0.00"
     }
+    // clearing all data
+    func clearData(){
+        date = Date()
+        type = .all
+        remark = ""
+        amount = ""
+    }
+    // Save data
+    func saveData(env: EnvironmentValues){
+        // do action
+        print("Save")
+    }
+    
 }
 

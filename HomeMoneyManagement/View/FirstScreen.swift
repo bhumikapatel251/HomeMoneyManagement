@@ -82,11 +82,40 @@ struct FirstScreen: View {
                 .ignoresSafeArea()
         }
         .fullScreenCover(isPresented: $expenseViewModel.addNewExpense) {
-            
+            expenseViewModel.clearData()
         } content: {
             NewExpense()
                 .environmentObject(expenseViewModel)
         }
+        .overlay(alignment: .bottomTrailing){
+        AddButton()
+        }
+    }
+    // add new button
+    @ViewBuilder
+    func AddButton()->some View{
+        Button{
+            expenseViewModel.addNewExpense.toggle()
+        } label: {
+            Image(systemName: "plus")
+                .font(.system(size: 25, weight: .medium))
+                .foregroundColor(.white)
+                .frame(width: 55, height: 55)
+                .background{
+                    Circle()
+                        .fill(
+                            .linearGradient(colors:[
+                                Color("G4"),
+                                Color("G5"),
+                                Color("G5"),
+                                Color("G4"),
+                            ], startPoint: .topLeading, endPoint: .bottomTrailing)
+                           
+                        )
+                }
+                .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
+        }
+        .padding()
     }
     //Transaction
     @ViewBuilder

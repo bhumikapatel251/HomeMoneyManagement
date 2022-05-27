@@ -121,11 +121,8 @@ struct NewExpense: View {
             .frame(maxWidth: .infinity, alignment: .center)
             
             //Save
-            Button{
-                
-                
-            } label:{
-                Text("Save")
+            Button(action: {expenseViewModel.saveData(env: env)})
+            { Text("Save")
                     .font(.title3)
                     .fontWeight((.semibold))
                     .padding(.vertical, 15)
