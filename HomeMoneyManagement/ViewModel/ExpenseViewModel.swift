@@ -25,6 +25,7 @@ class ExpenseViewModel: ObservableObject{
     @Published var type : ExpenseType = .all
     @Published var date: Date = Date()
     @Published var remark: String = ""
+    @Published var category: String = ""
     
     init(){
         //fetching current month starting date
@@ -71,11 +72,21 @@ class ExpenseViewModel: ObservableObject{
         type = .all
         remark = ""
         amount = ""
+        category = ""
     }
     // Save data
     func saveData(env: EnvironmentValues){
         // do action
         print("Save")
+        
+        let amountInDouble = (amount as NSString).doubleValue
+        let colors = ["Yellow", "Red", "Purple", "G2"]
+        let expense = Expense(category: category, remark: remark, amount: amountInDouble, date: date, type: type, color: colors.randomElement() ?? "Yellow")
+//        withAnimation{expense.append(expense)}
+//        expense = expense.sorted(by: { first, scnd in
+//            return scnd.date < first.date
+//        })
+//        env.dismiss()
     }
     
 }

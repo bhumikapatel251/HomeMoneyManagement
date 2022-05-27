@@ -13,7 +13,7 @@ struct TransactionCardView: View {
     var body: some View {
         HStack(spacing: 12){
             // first latter avtar
-            if let first = expense.remark.first{
+            if let first = expense.category.first{
                 Text(String(first))
                     .font(.title.bold())
                     .foregroundColor(.white)
@@ -24,10 +24,11 @@ struct TransactionCardView: View {
                     }
                     .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
             }
-            Text(expense.remark)
+            Text(expense.category)
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
+           
             
             VStack(alignment: .trailing, spacing: 7){
                 // display price
