@@ -86,10 +86,17 @@ struct NewExpense: View {
                 } icon: {
                     Image(systemName: "list.bullet.ractangle.portrait.fill")
                         .font(.title3)
-                        .foregroundColor(Color("Gary"))
+                        .foregroundColor(.black)
                 }
+                .padding(.vertical, 20)
+                .padding(.horizontal, 30)
+                .background{
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(.white)
+                }
+                .padding(.top, 25)
                 
-                    
+                 //DAte
               
                
             }
