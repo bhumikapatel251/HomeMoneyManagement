@@ -78,7 +78,7 @@ struct LoginScreen: View {
                     Button{
                         loginData.ForgotPassword()
                     } label: {
-                        Text("Forgot Password")
+                        Text(loginData.registerUser ? "" : "Forgot Password")
                             .font(.custom(customFont, size: 14))
                             .fontWeight(.semibold)
                             .foregroundColor(Color("G4"))
