@@ -80,7 +80,7 @@ struct NewExpense: View {
                 // Remark
                
                 Label {
-                    TextField("Remark", text: $expenseViewModel.remark)
+                    TextField("Category", text: $expenseViewModel.category)
                         .padding(.leading,10)
                     
                 } icon: {
@@ -118,6 +118,22 @@ struct NewExpense: View {
               
                
             }
+            Label {
+                TextField("Remark", text: $expenseViewModel.remark)
+                    .padding(.leading,10)
+                
+            } icon: {
+                Image(systemName: "note")
+                    .font(.title3)
+                    .foregroundColor(.gray)
+            }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 30)
+            .background{
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(.white)
+            }
+            .padding(.top, 25)
             .frame(maxWidth: .infinity, alignment: .center)
             
             //Save

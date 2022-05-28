@@ -26,6 +26,12 @@
 		ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */; };
 		ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */; };
 		ACB50A0F283CE774005C07FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0E283CE774005C07FD /* Task.swift */; };
+		ACFF14DE2842152C0054E07F /* LoginScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF14DD2842152C0054E07F /* LoginScreenModel.swift */; };
+		ACFF14E0284215740054E07F /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF14DF284215740054E07F /* LoginScreen.swift */; };
+		ACFF14E5284216180054E07F /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF14E2284216180054E07F /* Raleway-SemiBold.ttf */; };
+		ACFF14E6284216180054E07F /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF14E3284216180054E07F /* Raleway-Regular.ttf */; };
+		ACFF14E7284216180054E07F /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF14E4284216180054E07F /* Raleway-Bold.ttf */; };
+		ACFF14EA28421BB30054E07F /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF14E928421BB30054E07F /* CustomCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,13 @@
 		ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlashScreen.swift; sourceTree = "<group>"; };
 		ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		ACB50A0E283CE774005C07FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ACFF14DD2842152C0054E07F /* LoginScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenModel.swift; sourceTree = "<group>"; };
+		ACFF14DF284215740054E07F /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		ACFF14E2284216180054E07F /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		ACFF14E3284216180054E07F /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		ACFF14E4284216180054E07F /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		ACFF14E828421A460054E07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ACFF14E928421BB30054E07F /* CustomCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				AC576267283E01AE0050A4F4 /* TabCurveView.swift */,
+				ACFF14E928421BB30054E07F /* CustomCorner.swift */,
 				AC576269283E03C60050A4F4 /* CustomTabCurve.swift */,
 			);
 			path = Tab;
@@ -117,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */,
+				ACFF14DD2842152C0054E07F /* LoginScreenModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -145,6 +160,8 @@
 		ACB509DD283CCD43005C07FD /* HomeMoneyManagement */ = {
 			isa = PBXGroup;
 			children = (
+				ACFF14E828421A460054E07F /* Info.plist */,
+				ACFF14E1284216180054E07F /* Fonts */,
 				AC57626B283E19E60050A4F4 /* ViewModel */,
 				ACB50A0D283CE728005C07FD /* Model */,
 				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
@@ -190,6 +207,7 @@
 				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
 				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
 				AC7761202840A9380032A8A1 /* NewExpense.swift */,
+				ACFF14DF284215740054E07F /* LoginScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +219,16 @@
 				AC57626C283E1A020050A4F4 /* Expense.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACFF14E1284216180054E07F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ACFF14E2284216180054E07F /* Raleway-SemiBold.ttf */,
+				ACFF14E3284216180054E07F /* Raleway-Regular.ttf */,
+				ACFF14E4284216180054E07F /* Raleway-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +335,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFF14E5284216180054E07F /* Raleway-SemiBold.ttf in Resources */,
 				ACB509E6283CCD43005C07FD /* Preview Assets.xcassets in Resources */,
 				ACB509E3283CCD43005C07FD /* Assets.xcassets in Resources */,
+				ACFF14E7284216180054E07F /* Raleway-Bold.ttf in Resources */,
+				ACFF14E6284216180054E07F /* Raleway-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,9 +368,12 @@
 				AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */,
 				AC57626F283E1CB50050A4F4 /* ExpenseViewModel.swift in Sources */,
 				ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */,
+				ACFF14EA28421BB30054E07F /* CustomCorner.swift in Sources */,
 				AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */,
+				ACFF14E0284215740054E07F /* LoginScreen.swift in Sources */,
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
 				AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */,
+				ACFF14DE2842152C0054E07F /* LoginScreenModel.swift in Sources */,
 				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
 				AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */,
 				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
@@ -508,6 +542,7 @@
 				DEVELOPMENT_TEAM = LU893QGJWJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeMoneyManagement/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -537,6 +572,7 @@
 				DEVELOPMENT_TEAM = LU893QGJWJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeMoneyManagement/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

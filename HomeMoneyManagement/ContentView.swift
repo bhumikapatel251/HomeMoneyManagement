@@ -7,52 +7,24 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    @State private var isActive = false
-    @State private var size = 1.2
-    @State private var opacity = 0.8
+    // Log Status
+    @AppStorage("log_Status") var log_Status: Bool = false
     var body: some View {
         NavigationView{
-            if isActive{
-                FirstScreen()
-                    .navigationBarHidden(true)
-            }else{
-                VStack{
-                    VStack(alignment:.trailing){
-                        Image("Home2")
-                            .resizable()
-                            .frame(width: 120, height: 120, alignment: .trailing)
-                            .font(.system(size: 80))
-                        Text("HomeMoneyManagement")
-                            .font(.system(size: 10))
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("BG1"))
-                    
-                        
-                    }
-                    .padding(.bottom,50)
-                    .scaleEffect(size)
-                    .opacity(opacity)
-                    .onAppear{
-                        withAnimation(.easeIn(duration: 1.2)) {
-                            self.size = 2.0
-                            self.opacity = 2.8
-                        }
-                    }
-                
+            Group{
+                if log_Status{
+                    FirstScreen()
+                }else{
+                    HomeFlashScreen()
                 }
-                .onAppear{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self.isActive = true
-                    }
-                }
-       
-        
             }
+            .navigationBarHidden(true)
         }
         
+      
     }
-        
       
 }
 
