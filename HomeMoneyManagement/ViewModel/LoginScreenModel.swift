@@ -22,16 +22,30 @@ class LoginScreenModel: ObservableObject {
     @AppStorage("log_Status") var log_Status: Bool = false
     //Login call
     func Login(){
+        if(registerUser){
+            // register validation
+            // register api
+            print("register api")
+            
+        } else {
+            // login validation
+            // login api
+            print("login api")
+        }
+        
         // action
         withAnimation{
             log_Status = true
+            //print("login api")
         }
     }
     
     func Register(){
+       
         // action
         withAnimation{
             log_Status = true
+            print("register api")
         }
     }
     

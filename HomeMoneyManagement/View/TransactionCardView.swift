@@ -24,11 +24,17 @@ struct TransactionCardView: View {
                     }
                     .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
             }
+            VStack(alignment: .trailing, spacing: 7){
             Text(expense.category)
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
-           
+            Text(expense.remark)
+                .foregroundColor(.black)
+                .font(.caption)
+                .opacity(0.5)
+            }
+            
             
             VStack(alignment: .trailing, spacing: 7){
                 // display price
