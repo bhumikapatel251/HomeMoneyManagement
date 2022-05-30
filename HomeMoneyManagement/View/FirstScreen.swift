@@ -10,7 +10,7 @@ import SwiftUI
 struct FirstScreen: View {
     @StateObject var expenseViewModel: ExpenseViewModel = .init()
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        
             VStack(spacing: 12){
                 HStack(spacing:15){
                     VStack(alignment: .leading, spacing: 4){
@@ -72,11 +72,20 @@ struct FirstScreen: View {
                            
                     ExpenseCard()
                     .environmentObject(expenseViewModel)
-                    TransactionView()
                 
+                Text("Transaction")
+                    .font(.title2.bold())
+                    .opacity(0.7)
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .padding(.bottom,1)
+                ScrollView(.vertical, showsIndicators: false){
+                    
+                    TransactionView()
+                }
             }
-            .padding()
-        }
+            .padding(.leading,10)
+            .padding(.trailing,10)
+        
         .background{
             Color("BG")
                 .ignoresSafeArea()
@@ -121,11 +130,7 @@ struct FirstScreen: View {
     @ViewBuilder
     func TransactionView()->some View{
         VStack(spacing: 15){
-            Text("Transaction")
-                .font(.title2.bold())
-                .opacity(0.7)
-                .frame(maxWidth: .infinity,alignment: .leading)
-                .padding(.bottom)
+            
             
             ForEach(expenseViewModel.expense){expense in
                 // Trasactioncard

@@ -62,3 +62,11 @@ struct HomeFlashScreen_Previews: PreviewProvider {
         HomeFlashScreen()
     }
 }
+
+//Extending view to get screen bounds...
+
+extension View{
+    func getRect()->CGRect{
+        return UIScreen.main.bounds
+    }
+}
