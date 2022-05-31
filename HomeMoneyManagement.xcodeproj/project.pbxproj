@@ -10,10 +10,10 @@
 		AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708C4283F834F0013F420 /* ExpenseCard.swift */; };
 		AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708CA283F94B30013F420 /* FilteringDetailView.swift */; };
 		AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576267283E01AE0050A4F4 /* TabCurveView.swift */; };
-		AC57626A283E03C60050A4F4 /* CustomTabCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576269283E03C60050A4F4 /* CustomTabCurve.swift */; };
 		AC57626D283E1A020050A4F4 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57626C283E1A020050A4F4 /* Expense.swift */; };
 		AC57626F283E1CB50050A4F4 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */; };
 		AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576270283E3DE50050A4F4 /* TransactionCardView.swift */; };
+		AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6586552845FF2800E61423 /* CircleTabBar.swift */; };
 		AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761202840A9380032A8A1 /* NewExpense.swift */; };
 		AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */; };
 		ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */; };
@@ -55,10 +55,10 @@
 		AC5708C4283F834F0013F420 /* ExpenseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCard.swift; sourceTree = "<group>"; };
 		AC5708CA283F94B30013F420 /* FilteringDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringDetailView.swift; sourceTree = "<group>"; };
 		AC576267283E01AE0050A4F4 /* TabCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurveView.swift; sourceTree = "<group>"; };
-		AC576269283E03C60050A4F4 /* CustomTabCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabCurve.swift; sourceTree = "<group>"; };
 		AC57626C283E1A020050A4F4 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		AC576270283E3DE50050A4F4 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		AC6586552845FF2800E61423 /* CircleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTabBar.swift; sourceTree = "<group>"; };
 		AC7761202840A9380032A8A1 /* NewExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpense.swift; sourceTree = "<group>"; };
 		AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
 		ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMoneyManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,18 +113,9 @@
 			children = (
 				AC5708C4283F834F0013F420 /* ExpenseCard.swift */,
 				AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */,
+				ACFF14E928421BB30054E07F /* CustomCorner.swift */,
 			);
 			path = GradientView;
-			sourceTree = "<group>";
-		};
-		AC576266283E01530050A4F4 /* Tab */ = {
-			isa = PBXGroup;
-			children = (
-				AC576267283E01AE0050A4F4 /* TabCurveView.swift */,
-				ACFF14E928421BB30054E07F /* CustomCorner.swift */,
-				AC576269283E03C60050A4F4 /* CustomTabCurve.swift */,
-			);
-			path = Tab;
 			sourceTree = "<group>";
 		};
 		AC57626B283E19E60050A4F4 /* ViewModel */ = {
@@ -164,10 +155,10 @@
 				ACFF14E1284216180054E07F /* Fonts */,
 				AC57626B283E19E60050A4F4 /* ViewModel */,
 				ACB50A0D283CE728005C07FD /* Model */,
-				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
-				ACB509E0283CCD43005C07FD /* ContentView.swift */,
 				ACB509E4283CCD43005C07FD /* Preview Content */,
 				ACB50A0C283CE6E2005C07FD /* View */,
+				ACB509E0283CCD43005C07FD /* ContentView.swift */,
+				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
 			);
 			path = HomeMoneyManagement;
 			sourceTree = "<group>";
@@ -201,13 +192,14 @@
 			isa = PBXGroup;
 			children = (
 				AC5708C1283F83050013F420 /* GradientView */,
-				AC576266283E01530050A4F4 /* Tab */,
 				ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */,
 				ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */,
 				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
 				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
 				AC7761202840A9380032A8A1 /* NewExpense.swift */,
 				ACFF14DF284215740054E07F /* LoginScreen.swift */,
+				AC576267283E01AE0050A4F4 /* TabCurveView.swift */,
+				AC6586552845FF2800E61423 /* CircleTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,9 +370,9 @@
 				AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */,
 				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
 				AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */,
+				AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */,
 				AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */,
 				ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */,
-				AC57626A283E03C60050A4F4 /* CustomTabCurve.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

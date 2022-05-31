@@ -64,6 +64,8 @@ struct Trans: View {
                                 
                                 .resizable()
                                 .renderingMode(.template)
+                                
+                                //.clipShape(Circle())
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 25, height: 25)
                                // .foregroundColor(getColor(image: image))
