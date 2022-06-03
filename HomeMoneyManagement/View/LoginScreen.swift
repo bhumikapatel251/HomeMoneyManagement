@@ -9,6 +9,10 @@ import SwiftUI
 
 struct LoginScreen: View {
     @StateObject var loginData: LoginScreenModel = LoginScreenModel()
+   // @State var nativeAlert = false
+    @State var customAlert = false
+    @State var HUD = false
+    @State var email = ""
     var body: some View {
        // NavigationView{
         VStack{
@@ -77,6 +81,7 @@ struct LoginScreen: View {
                     // forgot password button
                     Button{
                         loginData.ForgotPassword()
+                        alertView()
                     } label: {
                         Text(loginData.registerUser ? "" : "Forgot Password")
                             .font(.custom(customFont, size: 14))
@@ -211,7 +216,32 @@ struct LoginScreen: View {
                     ,alignment: .trailing
         )
     }
+    func alertView(){
+        let alert = UIAlertController(title: "Forgot Password", message: "Enter Your Email", preferredStyle: .alert)
+        alert.addTextField{ (email) in
+            email.placeholder = "Enter your email"
+            email.returnKeyType = .next
+            email.keyboardType = .emailAddress
+        }
+        // Action
+        let forgotPassword = UIAlertAction(title: "Send", style: .default) { (_) in
+            //yor code
+            email = alert.textFields![0].text!
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive){ (_) in
+            //saME
+        }
+        //adding into alertview
+        alert.addAction(cancel)
+        alert.addAction(forgotPassword)
+        //presenting alertView
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(alert,animated: true, completion: {
+            // your code
+        })
+    }
 }
+
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
