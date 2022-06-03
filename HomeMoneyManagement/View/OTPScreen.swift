@@ -11,21 +11,28 @@ struct OTPScreen: View {
     var body: some View {
         NavigationView{
            
-            Verification()
+            VStack{
+                Verification()
+            }
         }
         .preferredColorScheme(.light)
       
     }
 }
 struct Verification : View{
-    
+    @State var code : [String] = []
     var body: some View{
         VStack{
             
             Text("Enter Verification Code").font(.title)
+            HStack(spacing: 20){
+                ForEach(code,id: \.self){i in
+                    Text(i).font(.title).fontWeight(.semibold)
+                }
+            }
             Spacer()
             
-            NumberPad()
+            NumberPad(codes: $code)
         }
     }
 }
@@ -36,12 +43,20 @@ struct OTPScreen_Previews: PreviewProvider {
     }
 }
 struct NumberPad: View{
+    @Binding var codes : [String]
     var body: some View{
         VStack(alignment: .leading,spacing: 20){
             ForEach(datas){i in
                 HStack(spacing: self.getspacing()){
                     ForEach(i.row){j in
-                        Button(action: {})
+                        Button(action: {
+                            if j.value == "delete.left.fill"{
+                                self.codes.removeLast()
+                                
+                            }else{
+                                self.codes.append(j.value)
+                            }
+                        })
                         {
                             if j.value == "delete.left.fill"{
                                 Image(systemName: j.value).font(.body).padding(.vertical)
