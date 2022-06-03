@@ -16,6 +16,7 @@ struct OTPScreen: View {
             }
         }
         .preferredColorScheme(.light)
+        .animation(.spring())
       
     }
 }
@@ -23,13 +24,14 @@ struct Verification : View{
     @State var code : [String] = []
     var body: some View{
         VStack{
-            
+            Spacer()
             Text("Enter Verification Code").font(.title)
             HStack(spacing: 20){
                 ForEach(code,id: \.self){i in
                     Text(i).font(.title).fontWeight(.semibold)
                 }
             }
+            .padding(.vertical)
             Spacer()
             
             NumberPad(codes: $code)
