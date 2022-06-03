@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView{
             Group{
                 if log_Status{
-                    TabCurveView()
+                    CircleTabBar()
                 }else{
                     HomeFlashScreen()
                 }

@@ -1,13 +1,13 @@
 //
-//  NewExpense.swift
+//  NewIncome.swift
 //  HomeMoneyManagement
 //
-//  Created by Bhumika Patel on 27/05/22.
+//  Created by Bhumika Patel on 02/06/22.
 //
 
 import SwiftUI
 
-struct NewExpense: View {
+struct NewIncome: View {
     @EnvironmentObject var expenseViewModel: ExpenseViewModel
     
     // environment value set for closed
@@ -39,9 +39,65 @@ struct NewExpense: View {
                     }
                
                 }
+                VStack{
+                    HStack{
+                        Button{
+                            
+                        } label: {
+                            Text("Income")
+                                .font(.title3)
+                                .fontWeight((.semibold))
+                                .padding(.vertical, 10)
+                                .frame(width: 150, height: 40)
+                                .background{
+                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                        .strokeBorder(.linearGradient(colors:[
+                                                        Color("G4"),
+                                                        Color("G5"),
+                                                        Color("G5"),
+                                                        Color("G4"),
+                                                ], startPoint: .topLeading, endPoint: .bottomTrailing))
+                                }
+                                .foregroundColor(.blue)
+                        }
+                        NavigationLink{
+                            NewExpense()
+                                .environmentObject(expenseViewModel)
+                        } label: {
+                            Text("Expense")
+                                .font(.title3)
+                                .fontWeight((.semibold))
+                                .padding(.vertical, 10)
+                                .frame(width: 150, height: 40)
+                                .background{
+                                    
+                                  RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                        .strokeBorder(.linearGradient(colors:[
+                                                        Color("G4"),
+                                                        Color("G5"),
+                                                        Color("G5"),
+                                                        Color("G4"),
+                                                ], startPoint: .topLeading, endPoint: .bottomTrailing))
+                                        //.matchedGeometryEffect(id: "TAB", in: animation)
+                                }
+                                .foregroundColor(.red)
+                        }
+                        
+                    }
+//                    .contentShape(Rectangle())
+//                    .onTapGesture{
+//                        withAnimation(animation)
+//                    }
+                    }
+                .frame(width: 350, height: 60)
+                .background{
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white)
+                    
+                }
                 
-                CustomSegmentedView()
-                    .environmentObject(expenseViewModel)
+//                CustomSegmentedView()
+//                    .environmentObject(expenseViewModel)
                 // Custom text Field
                     .padding()
                 
@@ -78,7 +134,7 @@ struct NewExpense: View {
                 
                     }
                 
-                // Remark
+                // Category
                
                 Label {
                     TextField("Category", text: $expenseViewModel.category)
@@ -169,14 +225,12 @@ struct NewExpense: View {
             Color("BG")
                 .ignoresSafeArea()
         }
-        
     }
-   
 }
 
-struct NewExpense_Previews: PreviewProvider {
+struct NewIncome_Previews: PreviewProvider {
     static var previews: some View {
-        NewExpense()
+        NewIncome()
             .environmentObject(ExpenseViewModel())
     }
 }

@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct CircleTabBar: View {
+    @State var index = 0
     var body: some View {
-        VStack{
+        VStack(spacing : 0){
             
-            Spacer()
+            ZStack{
+                if self.index == 0 {
+                    Color.black.opacity(0.05)
+                    FirstScreen()
+                    
+                } else if self.index == 1{
+                    Color.yellow
+                    
+                }else if self.index == 2{
+                    Color.blue
+                }else {
+                    Color.orange
+                }
+            }
             
-            CircleTab()
+            CircleTab(index: self.$index)
         }
-        .background(Color.black.opacity(0.05).edgesIgnoringSafeArea(.top))
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
@@ -27,13 +41,14 @@ struct CircleTabBar_Previews: PreviewProvider {
 
 struct CircleTab : View {
     
-    @State var index = 0
+    @Binding var index :Int
     
     var body: some View {
         
         HStack{
             Button(action: {
                 self.index = 0
+               
                 
             }) {
                 VStack{

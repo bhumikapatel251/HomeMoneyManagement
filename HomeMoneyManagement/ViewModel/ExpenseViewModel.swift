@@ -21,6 +21,7 @@ class ExpenseViewModel: ObservableObject{
     
     //new expense properties
     @Published var addNewExpense: Bool = false
+    @Published var addNewIncome: Bool = false
     @Published var amount : String = ""
     @Published var type : ExpenseType = .all
     @Published var date: Date = Date()
@@ -82,7 +83,6 @@ class ExpenseViewModel: ObservableObject{
         let amountInDouble = (amount as NSString).doubleValue
         let colors = ["Yellow", "Red", "Purple", "G2"]
         let expense = Expense(category: category, remark: remark, amount: amountInDouble, date: date, type: type, color: colors.randomElement() ?? "Yellow")
-//        withAnimation{expense.append(expense)}
 //        expense = expense.sorted(by: { first, scnd in
 //            return scnd.date < first.date
 //        })
@@ -91,3 +91,4 @@ class ExpenseViewModel: ObservableObject{
     
 }
 
+//        withAnimation{expense.append(expense)}
