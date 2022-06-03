@@ -9,7 +9,24 @@ import SwiftUI
 
 struct OTPScreen: View {
     var body: some View {
-        NumberPad()
+        NavigationView{
+           
+            Verification()
+        }
+        .preferredColorScheme(.light)
+      
+    }
+}
+struct Verification : View{
+    
+    var body: some View{
+        VStack{
+            
+            Text("Enter Verification Code").font(.title)
+            Spacer()
+            
+            NumberPad()
+        }
     }
 }
 
@@ -20,16 +37,16 @@ struct OTPScreen_Previews: PreviewProvider {
 }
 struct NumberPad: View{
     var body: some View{
-        VStack(spacing: 20){
+        VStack(alignment: .leading,spacing: 20){
             ForEach(datas){i in
-                HStack{
+                HStack(spacing: self.getspacing()){
                     ForEach(i.row){j in
                         Button(action: {})
                         {
                             if j.value == "delete.left.fill"{
                                 Image(systemName: j.value).font(.body).padding(.vertical)
                             }else{
-                                Text(j.value).font(.body).fontWeight(.semibold).padding(.vertical)
+                                Text(j.value).font(.title).fontWeight(.semibold).padding(.vertical)
                             }
                           
                         }
@@ -38,6 +55,10 @@ struct NumberPad: View{
             }
             
         }
+        .foregroundColor(.black)
+    }
+    func getspacing()->CGFloat{
+        return UIScreen.main.bounds.width / 3
     }
 }
 
