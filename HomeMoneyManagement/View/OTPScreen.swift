@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct OTPScreen: View {
+    @State var status = false
     var body: some View {
         NavigationView{
            
             VStack{
-                Verification()
+                if status{
+                    LoginScreen()
+                }else{
+                    
+                    Verification()
+                }
+            }
+            .onAppear{
+                NotificationCenter.default.addObserver(forName: NSNotification.Name("Success"), object: nil, queue: .main) { (_) in
+                    self.status = true
+                }
             }
         }
         .preferredColorScheme(.light)
@@ -20,6 +31,7 @@ struct OTPScreen: View {
       
     }
 }
+
 struct Verification : View{
     @State var code : [String] = []
     var body: some View{
@@ -57,6 +69,11 @@ struct NumberPad: View{
                                 
                             }else{
                                 self.codes.append(j.value)
+                                if self.codes.count == 4{
+                                    NotificationCenter.default.post(name: NSNotification.Name("Success"), object: nil)
+                                    
+                                    self.codes.removeAll()
+                                }
                             }
                         })
                         {
