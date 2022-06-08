@@ -11,7 +11,8 @@ struct LoginScreen: View {
     @StateObject var loginData: LoginScreenModel = LoginScreenModel()
    // @State var nativeAlert = false
     @State var customAlert = false
-    @State var HUD = false
+    @State var show: Bool = false
+   // @State var HUD = false
     @State var email = ""
     var body: some View {
        // NavigationView{
@@ -81,13 +82,49 @@ struct LoginScreen: View {
                     // forgot password button
                     Button{
                         loginData.ForgotPassword()
-                        alertView()
+                       // alertView()
+                        show.toggle()
                     } label: {
                         Text(loginData.registerUser ? "" : "Forgot Password")
                             .font(.custom(customFont, size: 14))
                             .fontWeight(.semibold)
                             .foregroundColor(Color("G4"))
                         
+                        
+                    }
+                    .sheet(isPresented: $show){
+                        VStack(alignment: .leading){
+                            Text("Forgot Password")
+                                .font(.custom(customFont, size: 22).bold())
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            CustomTextField(icon: "envelope", title: "Email", hint: "admin@gmail.com", value: $loginData.email, showPassword: .constant(false))
+                                .padding(.top,60)
+                            Button{
+                                
+                            } label: {
+                                Text("Send")
+                                    .font(.custom(customFont, size: 17).bold())
+                                    .padding(.vertical,20)
+                                    .frame(maxWidth: .infinity)
+                                    .foregroundColor(.white)
+                                    .background{
+                                        LinearGradient(colors: [
+                                            Color("G4"),
+                                            Color("G5"),
+                                            Color("G5"),
+                                            Color("G4"),
+                                        ], startPoint: .top, endPoint: .bottom)
+                                        .ignoresSafeArea()
+                                    }
+                                    .cornerRadius(15)
+                                    .shadow(color: Color.black.opacity(0.07), radius: 5, x: 5, y: 5)
+                                
+                                
+                            }
+                            .padding(.top,25)
+                        }
+                        .padding(.vertical,60)
+                        .padding(.horizontal)
                         
                     }
                     .padding(.top, 8)
@@ -133,8 +170,11 @@ struct LoginScreen: View {
                         
                         
                     }
+                    
+                    
                     .padding(.top, 8)
                     //.frame(maxWidth: .infinity, alignment: .leading)
+                    
                 }
                 .padding(30)
             }
@@ -216,30 +256,30 @@ struct LoginScreen: View {
                     ,alignment: .trailing
         )
     }
-    func alertView(){
-        let alert = UIAlertController(title: "Forgot Password", message: "Enter Your Email", preferredStyle: .alert)
-        alert.addTextField{ (email) in
-            email.placeholder = "Enter your email"
-            email.returnKeyType = .next
-            email.keyboardType = .emailAddress
-        }
-        // Action
-        let forgotPassword = UIAlertAction(title: "Send", style: .default) { (_) in
-            //yor code
-            email = alert.textFields![0].text!
-        }
-        let cancel = UIAlertAction(title: "Cancel", style: .destructive){ (_) in
-            //saME
-        }
-        //adding into alertview
-        alert.addAction(cancel)
-        alert.addAction(forgotPassword)
-        //presenting alertView
-        
-        UIApplication.shared.windows.first?.rootViewController?.present(alert,animated: true, completion: {
-            // your code
-        })
-    }
+//    func alertView(){
+//        let alert = UIAlertController(title: "Forgot Password", message: "Enter Your Email", preferredStyle: .alert)
+//        alert.addTextField{ (email) in
+//            email.placeholder = "Enter your email"
+//            email.returnKeyType = .next
+//            email.keyboardType = .emailAddress
+//        }
+//        // Action
+//        let forgotPassword = UIAlertAction(title: "Send", style: .default) { (_) in
+//            //yor code
+//            email = alert.textFields![0].text!
+//        }
+//        let cancel = UIAlertAction(title: "Cancel", style: .destructive){ (_) in
+//            //saME
+//        }
+//        //adding into alertview
+//        alert.addAction(cancel)
+//        alert.addAction(forgotPassword)
+//        //presenting alertView
+//
+//        UIApplication.shared.windows.first?.rootViewController?.present(alert,animated: true, completion: {
+//            // your code
+//        })
+//    }
 }
 
 struct LoginScreen_Previews: PreviewProvider {
