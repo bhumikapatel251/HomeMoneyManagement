@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0FA9FD2850AAA300707CFA /* ValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0FA9FC2850AAA300707CFA /* ValidationExtension.swift */; };
 		AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708C4283F834F0013F420 /* ExpenseCard.swift */; };
 		AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5708CA283F94B30013F420 /* FilteringDetailView.swift */; };
 		AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576267283E01AE0050A4F4 /* TabCurveView.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0FA9FC2850AAA300707CFA /* ValidationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtension.swift; sourceTree = "<group>"; };
 		AC5708C4283F834F0013F420 /* ExpenseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCard.swift; sourceTree = "<group>"; };
 		AC5708CA283F94B30013F420 /* FilteringDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringDetailView.swift; sourceTree = "<group>"; };
 		AC576267283E01AE0050A4F4 /* TabCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurveView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0FA9F92850AA5F00707CFA /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				AC0FA9FC2850AAA300707CFA /* ValidationExtension.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
 		AC5708C1283F83050013F420 /* GradientView */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		ACB509DD283CCD43005C07FD /* HomeMoneyManagement */ = {
 			isa = PBXGroup;
 			children = (
+				AC0FA9F92850AA5F00707CFA /* Validation */,
 				ACFF14E828421A460054E07F /* Info.plist */,
 				ACFF14E1284216180054E07F /* Fonts */,
 				AC57626B283E19E60050A4F4 /* ViewModel */,
@@ -368,6 +379,7 @@
 				AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */,
 				ACFF14E0284215740054E07F /* LoginScreen.swift in Sources */,
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
+				AC0FA9FD2850AAA300707CFA /* ValidationExtension.swift in Sources */,
 				AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */,
 				ACFF14DE2842152C0054E07F /* LoginScreenModel.swift in Sources */,
 				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
