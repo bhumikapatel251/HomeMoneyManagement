@@ -1,11 +1,11 @@
-////
-////  ValidationExtension.swift
-////  HomeMoneyManagement
-////
-////  Created by Bhumika Patel on 08/06/22.
-////
 //
-//import SwiftUI
+//  ValidationExtension.swift
+//  HomeMoneyManagement
+//
+//  Created by Bhumika Patel on 08/06/22.
+//
+
+import Foundation
 //class EmailValidationObj: ObservableObject {
 //    @Published var email = "" {
 //        didSet {
@@ -27,7 +27,7 @@
 //        }
 //    }
 //    @Published var error = ""
-//    
+//
 //    private func isValidationPassword(){
 //        guard !self.pass.isEmpty else {
 //            self.error = "Required"
@@ -46,7 +46,7 @@
 //            if !self.pass.lowerCase() {
 //                self.error = "Must be contain at least one LowerCase"
 //                return
-//                
+//
 //            }
 //            if !self.pass.containsCharacter(){
 //                self.error = "Must be contain at least one special character"
@@ -61,54 +61,54 @@
 //        }
 //    }
 //}
-//
-//extension String {
-//    func validateEmail() -> Bool {
-//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-//        return applyPredicateOnRegex(regexStr: emailRegEx)
-//    }
-//    func validatePassword(mini: Int = 8, max: Int = 8) -> Bool {
-//        var passRegEx = ""
-//        if mini >= max {
-//            passRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{\(mini),}$"
+
+extension String {
+    func validateEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        return applyPredicateOnRegex(regexStr: emailRegEx)
+    }
+    func validatePassword(mini: Int = 8, max: Int = 8) -> Bool {
+        var passRegEx = ""
+        if mini >= max {
+            passRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{\(mini),}$"
+        } else {
+            passRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{\(mini),\(max)}$"
+        }
+        return applyPredicateOnRegex(regexStr: passRegEx)
+        
+    }
+    func upperCase() -> Bool {
+        let uppercaseRegex = ".*[A-Z]+.*"
+        return applyPredicateOnRegex(regexStr: uppercaseRegex)
+    }
+    func lowerCase() -> Bool {
+        let lowercaseRegex = ".*[a-z]+.*"
+        return applyPredicateOnRegex(regexStr: lowercaseRegex)
+    }
+    func containsCharacter() -> Bool {
+        let containscharRegex = ".*[!@#$%^&*()\\-_=+{}|?>.<]+.*"
+        return applyPredicateOnRegex(regexStr: containscharRegex)
+    }
+    func containsDigit() -> Bool {
+        let digitRegex = ".*[0-9]+.*"
+        return applyPredicateOnRegex(regexStr: digitRegex)
+    }
+    func applyPredicateOnRegex(regexStr: String) -> Bool {
+        let trimmedString = self.trimmingCharacters(in: .whitespaces)
+        let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
+        let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
+        return isValidateOtherString
+    }
+    
+    func validateVeryfy(mini: Int = 4, max: Int = 6) -> Bool {
+//        var veryRegEx = ""
+//        if mini == max {
+//            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),}$"
 //        } else {
-//            passRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{\(mini),\(max)}$"
+//            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),\(max)}$"
 //        }
-//        return applyPredicateOnRegex(regexStr: passRegEx)
-//        
-//    }
-//    func upperCase() -> Bool {
-//        let uppercaseRegex = ".*[A-Z]+.*"
-//        return applyPredicateOnRegex(regexStr: uppercaseRegex)
-//    }
-//    func lowerCase() -> Bool {
-//        let lowercaseRegex = ".*[a-z]+.*"
-//        return applyPredicateOnRegex(regexStr: lowercaseRegex)
-//    }
-//    func containsCharacter() -> Bool {
-//        let containscharRegex = ".*[!@#$%^&*()\\-_=+{}|?>.<]+.*"
-//        return applyPredicateOnRegex(regexStr: containscharRegex)
-//    }
-//    func containsDigit() -> Bool {
-//        let digitRegex = ".*[0-9]+.*"
-//        return applyPredicateOnRegex(regexStr: digitRegex)
-//    }
-//    func applyPredicateOnRegex(regexStr: String) -> Bool {
-//        let trimmedString = self.trimmingCharacters(in: .whitespaces)
-//        let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
-//        let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
-//        return isValidateOtherString
-//    }
-//    
-//    func validateVeryfy(mini: Int = 4, max: Int = 6) -> Bool {
-////        var veryRegEx = ""
-////        if mini == max {
-////            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),}$"
-////        } else {
-////            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),\(max)}$"
-////        }
-//        return applyPredicateOnRegex(regexStr: "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(4),\(6)}$")
-//        
-//    }
-//    
-//}
+        return applyPredicateOnRegex(regexStr: "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(4),\(6)}$")
+        
+    }
+    
+}

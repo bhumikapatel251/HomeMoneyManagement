@@ -114,10 +114,12 @@ struct FirstScreen: View {
                     Circle()
                         .fill(
                             .linearGradient(colors:[
-                                Color("G4"),
-                                Color("G5"),
-                                Color("G5"),
-                                Color("G4"),
+                                Color("HomColor"),
+                                Color("HomColor"),
+                                Color("LPink"),
+                                Color("LPink"),
+                                Color("HomColor"),
+                                Color("HomColor"),
                             ], startPoint: .topLeading, endPoint: .bottomTrailing)
                            
                         )

@@ -15,7 +15,7 @@ struct CustomSegmentedView: View {
             ForEach([ExpenseType.income,ExpenseType.expense],id: \.rawValue){tab in
                 Text(tab.rawValue)
                     .fontWeight(.semibold)
-                    .foregroundColor(expenseViewModel.tabName == tab ? .white : .black)
+                    .foregroundColor(expenseViewModel.tabName == tab ? .blue : .black)
                     .opacity(expenseViewModel.tabName == tab ? 1 : 0.7)
                     .padding(.vertical, 12)
                     .frame(maxWidth: .infinity)
@@ -25,16 +25,9 @@ struct CustomSegmentedView: View {
                         if expenseViewModel.tabName == tab{
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 
-                                .fill(
-                                    .linearGradient(colors:[
-                                        Color("G4"),
-                                        Color("G5"),
-                                        Color("G5"),
-                                        Color("G4"),
-                                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-    //                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-    //                                .strokeBorder(.red)
+                                .fill(Color("BG"))
+                                   RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .strokeBorder(.blue)
                             
                                 .matchedGeometryEffect(id: "TAB", in: animation)
                         }
@@ -48,9 +41,17 @@ struct CustomSegmentedView: View {
             }
         }
         .padding(5)
-        .background{
+       .background{
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(.white)
+               .fill(Color("BG"))
+//                .fill(
+//                    .linearGradient(colors:[
+//                        Color("HomColor"),
+//                        Color("LPink"),
+//                        Color("LPink"),
+//                        Color("HomColor"),
+//                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
+//                )
         }
     }
 }

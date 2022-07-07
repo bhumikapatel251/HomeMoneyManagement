@@ -12,89 +12,48 @@ struct NewIncome: View {
     
     // environment value set for closed
     @Environment(\.self) var env
+    @State var isIncome = false
     @Namespace var animation
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        NavigationView{
+            ScrollView(.vertical, showsIndicators: false){
             VStack(spacing: 15){
             HStack(spacing: 15){
-                VStack(alignment: .leading, spacing: 4){
-                    Text("Add")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .opacity(0.7)
-                        .frame(maxWidth: .infinity,  alignment: .leading)
-                }
-                .padding()
-                .overlay(alignment: .topTrailing) {
-                    Button{
-                        env.dismiss()
-                        } label: {
-                            Image(systemName: "xmark")
-                                .font(.title2)
-                                .foregroundColor(.black)
-                                .opacity(0.7)
-                        }
-                        .padding()
+//                VStack(alignment: .leading, spacing: 4){
+//
+//                }
+               // .padding()
+               
+//                    Button{
+//                        env.dismiss()
+//                        } label: {
+//                            Image(systemName: "xmark")
+//                                .font(.title2)
+//                                .foregroundColor(.black)
+//                                .opacity(0.7)
+//                        }
+//                        .padding()
                     
                     }
                
-                }
+                
                 VStack{
-                    HStack{
-                        Button{
-                            
-                        } label: {
-                            Text("Income")
-                                .font(.title3)
-                                .fontWeight((.semibold))
-                                .padding(.vertical, 10)
-                                .frame(width: 150, height: 40)
-                                .background{
-                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .strokeBorder(.linearGradient(colors:[
-                                                        Color("G4"),
-                                                        Color("G5"),
-                                                        Color("G5"),
-                                                        Color("G4"),
-                                                ], startPoint: .topLeading, endPoint: .bottomTrailing))
-                                }
-                                .foregroundColor(.blue)
-                        }
-                        NavigationLink{
-                            NewExpense()
-                                .environmentObject(expenseViewModel)
-                        } label: {
-                            Text("Expense")
-                                .font(.title3)
-                                .fontWeight((.semibold))
-                                .padding(.vertical, 10)
-                                .frame(width: 150, height: 40)
-                                .background{
-                                    
-                                  RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .strokeBorder(.linearGradient(colors:[
-                                                        Color("G4"),
-                                                        Color("G5"),
-                                                        Color("G5"),
-                                                        Color("G4"),
-                                                ], startPoint: .topLeading, endPoint: .bottomTrailing))
-                                        //.matchedGeometryEffect(id: "TAB", in: animation)
-                                }
-                                .foregroundColor(.red)
-                        }
-                        
-                    }
+                    Picker(selection: $isIncome, label: Text("Picker here")){
+                        Text("Expense")
+                            .tag(true)
+                        Text("Income")
+                            .tag(false)
+                    }.pickerStyle(SegmentedPickerStyle())
+                        //.foregroundColor($isIncome ? Color.blue : .red)
+                        .padding()
+                   
 //                    .contentShape(Rectangle())
 //                    .onTapGesture{
 //                        withAnimation(animation)
 //                    }
                     }
                 .frame(width: 350, height: 60)
-                .background{
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white)
-                    
-                }
+               
                 
 //                CustomSegmentedView()
 //                    .environmentObject(expenseViewModel)
@@ -121,7 +80,7 @@ struct NewIncome: View {
                                     }
                         
                             }
-                            .padding(.vertical,10)
+                            .padding(.vertical,15)
                             .frame(maxWidth: .infinity)
                             .background{
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -133,6 +92,7 @@ struct NewIncome: View {
                 
                 
                     }
+                
                 
                 // Category
                
@@ -152,7 +112,26 @@ struct NewIncome: View {
                         .fill(.white)
                 }
                 .padding(.top, 25)
-                
+                .padding(.horizontal,10)
+                if isIncome{
+                    Label {
+                        TextField("SubCategory", text: $expenseViewModel.category)
+                            .padding(.leading,10)
+                        
+                    } icon: {
+                        Image(systemName: "doc.text.fill")
+                            .font(.title3)
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.vertical, 20)
+                    .padding(.horizontal, 30)
+                    .background{
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(.white)
+                    }
+                    .padding(.top, 25)
+                    .padding(.horizontal,10)
+                }
                  //DAte
                 Label {
                     DatePicker.init("", selection: $expenseViewModel.date,in: Date.distantPast...Date(), displayedComponents: [.date])
@@ -172,6 +151,7 @@ struct NewIncome: View {
                         .fill(.white)
                 }
                 .padding(.top, 25)
+                .padding(.horizontal,10)
               
                
             }
@@ -191,10 +171,14 @@ struct NewIncome: View {
                     .fill(.white)
             }
             .padding(.top, 25)
+            .padding(.horizontal,10)
             .frame(maxWidth: .infinity, alignment: .center)
             
             //Save
-            Button(action: {expenseViewModel.saveData(env: env)})
+            Button(action: {
+                expenseViewModel.saveData(env: env)
+                
+            })
             { Text("Save")
                     .font(.title3)
                     .fontWeight((.semibold))
@@ -204,10 +188,10 @@ struct NewIncome: View {
                         RoundedRectangle(cornerRadius: 12, style: .continuous)
                             .fill(
                                 .linearGradient(colors:[
-                                    Color("G4"),
-                                    Color("G5"),
-                                    Color("G5"),
-                                    Color("G4"),
+                                    Color("HomColor"),
+                                    Color("LPink"),
+                                    Color("LPink"),
+                                    Color("HomColor"),
                                 ], startPoint: .topLeading, endPoint: .bottomTrailing)
                             )
                     }
@@ -215,16 +199,20 @@ struct NewIncome: View {
                     .padding(.bottom,10)
                 
             }
+            .padding(.horizontal,10)
             .disabled(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "")
             .opacity(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "" ? 0.6 : 1)
             .padding(.vertical)
         }
-        
-        .padding()
-        .background{
-            Color("BG")
-                .ignoresSafeArea()
+            .navigationTitle(isIncome ? "Add Expense"  : "Add Income")
+            .background{
+                Color("BG")
+                    .ignoresSafeArea()
+            }
+            
         }
+        //.padding()
+       
     }
 }
 

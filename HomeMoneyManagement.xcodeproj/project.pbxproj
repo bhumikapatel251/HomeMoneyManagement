@@ -17,6 +17,7 @@
 		AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6586552845FF2800E61423 /* CircleTabBar.swift */; };
 		AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761202840A9380032A8A1 /* NewExpense.swift */; };
 		AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */; };
+		ACA9A3EC28520BEB00AF3D6C /* UIAlertcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9A3EB28520BEB00AF3D6C /* UIAlertcontroller.swift */; };
 		ACAFDE372848D198005EE8B6 /* NewIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAFDE362848D198005EE8B6 /* NewIncome.swift */; };
 		ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */; };
 		ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509E0283CCD43005C07FD /* ContentView.swift */; };
@@ -28,6 +29,9 @@
 		ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */; };
 		ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */; };
 		ACB50A0F283CE774005C07FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0E283CE774005C07FD /* Task.swift */; };
+		ACE519772876E12E0074C4DE /* INEXPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE519762876E12E0074C4DE /* INEXPickerView.swift */; };
+		ACF3AE13287407C700B74EE9 /* AnimatedSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3AE12287407C700B74EE9 /* AnimatedSplashScreen.swift */; };
+		ACF3AE1628741CE900B74EE9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3AE1528741CE900B74EE9 /* Extension.swift */; };
 		ACFF14DE2842152C0054E07F /* LoginScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF14DD2842152C0054E07F /* LoginScreenModel.swift */; };
 		ACFF14E0284215740054E07F /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF14DF284215740054E07F /* LoginScreen.swift */; };
 		ACFF14E5284216180054E07F /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF14E2284216180054E07F /* Raleway-SemiBold.ttf */; };
@@ -64,6 +68,7 @@
 		AC6586552845FF2800E61423 /* CircleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTabBar.swift; sourceTree = "<group>"; };
 		AC7761202840A9380032A8A1 /* NewExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpense.swift; sourceTree = "<group>"; };
 		AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
+		ACA9A3EB28520BEB00AF3D6C /* UIAlertcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertcontroller.swift; sourceTree = "<group>"; };
 		ACAFDE362848D198005EE8B6 /* NewIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIncome.swift; sourceTree = "<group>"; };
 		ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMoneyManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementApp.swift; sourceTree = "<group>"; };
@@ -78,6 +83,9 @@
 		ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlashScreen.swift; sourceTree = "<group>"; };
 		ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		ACB50A0E283CE774005C07FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ACE519762876E12E0074C4DE /* INEXPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INEXPickerView.swift; sourceTree = "<group>"; };
+		ACF3AE12287407C700B74EE9 /* AnimatedSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSplashScreen.swift; sourceTree = "<group>"; };
+		ACF3AE1528741CE900B74EE9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ACFF14DD2842152C0054E07F /* LoginScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenModel.swift; sourceTree = "<group>"; };
 		ACFF14DF284215740054E07F /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		ACFF14E2284216180054E07F /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0FA9FC2850AAA300707CFA /* ValidationExtension.swift */,
+				ACA9A3EB28520BEB00AF3D6C /* UIAlertcontroller.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 				AC5708C4283F834F0013F420 /* ExpenseCard.swift */,
 				AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */,
 				ACFF14E928421BB30054E07F /* CustomCorner.swift */,
+				ACE519762876E12E0074C4DE /* INEXPickerView.swift */,
 			);
 			path = GradientView;
 			sourceTree = "<group>";
@@ -163,6 +173,8 @@
 		ACB509DD283CCD43005C07FD /* HomeMoneyManagement */ = {
 			isa = PBXGroup;
 			children = (
+				ACF3AE1428741CD200B74EE9 /* Helper */,
+				ACF3AE11287407A900B74EE9 /* Animation */,
 				AC0FA9F92850AA5F00707CFA /* Validation */,
 				ACFF14E828421A460054E07F /* Info.plist */,
 				ACFF14E1284216180054E07F /* Fonts */,
@@ -170,7 +182,6 @@
 				ACB50A0D283CE728005C07FD /* Model */,
 				ACB509E4283CCD43005C07FD /* Preview Content */,
 				ACB50A0C283CE6E2005C07FD /* View */,
-				ACB509E0283CCD43005C07FD /* ContentView.swift */,
 				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
 			);
 			path = HomeMoneyManagement;
@@ -214,6 +225,7 @@
 				AC576267283E01AE0050A4F4 /* TabCurveView.swift */,
 				AC6586552845FF2800E61423 /* CircleTabBar.swift */,
 				ACAFDE362848D198005EE8B6 /* NewIncome.swift */,
+				ACB509E0283CCD43005C07FD /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +237,22 @@
 				AC57626C283E1A020050A4F4 /* Expense.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACF3AE11287407A900B74EE9 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				ACF3AE12287407C700B74EE9 /* AnimatedSplashScreen.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		ACF3AE1428741CD200B74EE9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ACF3AE1528741CE900B74EE9 /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		ACFF14E1284216180054E07F /* Fonts */ = {
@@ -378,17 +406,21 @@
 				ACAFDE372848D198005EE8B6 /* NewIncome.swift in Sources */,
 				AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */,
 				ACFF14E0284215740054E07F /* LoginScreen.swift in Sources */,
+				ACA9A3EC28520BEB00AF3D6C /* UIAlertcontroller.swift in Sources */,
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
 				AC0FA9FD2850AAA300707CFA /* ValidationExtension.swift in Sources */,
 				AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */,
 				ACFF14DE2842152C0054E07F /* LoginScreenModel.swift in Sources */,
+				ACE519772876E12E0074C4DE /* INEXPickerView.swift in Sources */,
 				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
 				AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */,
+				ACF3AE1628741CE900B74EE9 /* Extension.swift in Sources */,
 				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
 				AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */,
 				AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */,
 				AC5708CB283F94B30013F420 /* FilteringDetailView.swift in Sources */,
 				ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */,
+				ACF3AE13287407C700B74EE9 /* AnimatedSplashScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +585,6 @@
 				INFOPLIST_FILE = HomeMoneyManagement/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +614,6 @@
 				INFOPLIST_FILE = HomeMoneyManagement/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

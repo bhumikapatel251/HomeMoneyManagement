@@ -148,10 +148,10 @@ struct NewExpense: View {
                         RoundedRectangle(cornerRadius: 12, style: .continuous)
                             .fill(
                                 .linearGradient(colors:[
-                                    Color("G4"),
-                                    Color("G5"),
-                                    Color("G5"),
-                                    Color("G4"),
+                                    Color("HomColor"),
+                                    Color("LPink"),
+                                    Color("LPink"),
+                                    Color("HomColor"),
                                 ], startPoint: .topLeading, endPoint: .bottomTrailing)
                             )
                     }

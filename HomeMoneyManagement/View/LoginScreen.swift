@@ -6,11 +6,81 @@
 //
 
 import SwiftUI
+enum PasswordStatus {
+    case empty
+    case notStrongEnough
+    case repeatedPasswordWrong
+    case valid
+}
+import Combine
+class LoginModel: ObservableObject{
+    @Published var email = ""
+    @Published var password = ""
+    @Published var conPassword = ""
+    
+    @Published var isValid = false
+    private static let predicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&]).{6,}$")
+    
+    private var isEmail: AnyPublisher<Bool, Never>{
+        $email
+            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .map { $0.count >= 3 }
+            .eraseToAnyPublisher()
+        
+    }
+    private var isPassword: AnyPublisher<Bool, Never>{
+        $password
+            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .map { $0.isEmpty }
+            .eraseToAnyPublisher()
+        
+    }
+    private var isConfirmPassword: AnyPublisher<Bool, Never>{
+        Publishers.CombineLatest($password, $conPassword)
+            .debounce(for: 0.2, scheduler: RunLoop.main)
+            .map { $0 == $1 }
+            .eraseToAnyPublisher()
+            
+        
+    }
+    private var isPasswordStrong: AnyPublisher<Bool, Never> {
+        $password
+            .debounce(for: 0.2, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .map {
+                LoginModel.predicate.evaluate(with: $0)
+            }
+            .eraseToAnyPublisher()
+    }
+    private var isPasswordvalid: AnyPublisher<PasswordStatus, Never>{
+        Publishers.CombineLatest3(isPassword,isPasswordStrong,isConfirmPassword)
+            .map {
+                if $0 { return PasswordStatus.empty }
+                if $1 { return PasswordStatus.notStrongEnough }
+                if $2 { return PasswordStatus.repeatedPasswordWrong }
+                return PasswordStatus.valid
+            }
+            .eraseToAnyPublisher()
+    }
+    private var isLoginValid: AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest(isPasswordvalid,isEmail)
+            .map { $0 == .valid && $1 }
+            .eraseToAnyPublisher()
+    }
+    init() {
+        isLoginValid
+            .receive(on: RunLoop.main)
+            .assign(to: \.isValid, on: self)
+    }
+}
 
 struct LoginScreen: View {
     @StateObject var loginData: LoginScreenModel = LoginScreenModel()
-    @ObservedObject var emailObj = EmailValidationObj()
-    @ObservedObject var passObj = PasswordValidationObj()
+//    @ObservedObject var emailObj = EmailValidationObj()
+//    @ObservedObject var passObj = PasswordValidationObj()
+//    @ObservedObject var cpassObj = ConfirmPasswordObj()
     
     
    // @State var nativeAlert = false
@@ -70,22 +140,26 @@ struct LoginScreen: View {
                     Text(loginData.registerUser ? "Register" : "Login")
                         .font(.custom(customFont, size: 22).bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
                     //custom textfield
                     
-                    CustomTextField(icon: "envelope", title: "Email", hint: "admin@gmail.com", value: $emailObj.email, showPassword: .constant(false))
-                    Text(emailObj.error).foregroundColor(.red)
-                        .padding(.top,30)
+                    VStack (alignment: .leading, spacing: 10){
+                        CustomTextField(icon: "envelope", title: "Email", hint: "admin@gmail.com", value: $loginData.email, showPassword: .constant(false))
                     
-                    CustomTextField(icon: "lock", title: "Password", hint: "123456", value: $passObj.pass, showPassword:$loginData.showPassword)
-                    Text(passObj.error).foregroundColor(.red)
-                        .padding(.top,10)
+                  //  Text(emailObj.error).foregroundColor(.red)
+                        .padding(.top,0)
+                    
+                        CustomTextField(icon: "lock", title: "Password", hint: "Simple@pass12", value: $loginData.password, showPassword:$loginData.showPassword)
+                  //  Text(passObj.error).foregroundColor(.red)
+                        .padding(.top,0)
                     
                    //register reenter password
                     if loginData.registerUser{
-                        CustomTextField(icon: "lock", title: "Re-Enter Password", hint: "1234546", value: $loginData.re_Enter_Password, showPassword: $loginData.showReEnterPassword)
+                        CustomTextField(icon: "lock", title: "Re-Enter Password", hint: "Simple@pass12", value: $loginData.re_Enter_Password, showPassword: $loginData.showReEnterPassword)
+                        //Text(cpassObj.error).foregroundColor(.red)
                             .padding(.top,10)
                     }
-                    // forgot password button
+                    }// forgot password button
                     Button{
                         loginData.ForgotPassword()
                        // alertView()
@@ -170,10 +244,12 @@ struct LoginScreen: View {
                         }
                     } label: {
                         Text(loginData.registerUser ? "Back to Login" : "Create Account")
+                           
                             .font(.custom(customFont, size: 14))
                             .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
                             .foregroundColor(Color("G4"))
-                        
+                          
                         
                     }
                     
@@ -295,104 +371,159 @@ struct LoginScreen_Previews: PreviewProvider {
 }
 
 
-class EmailValidationObj: ObservableObject {
-    @Published var email = "" {
-        didSet {
-            if self.email.isEmpty {
-                self.error = "Required"
-            } else if !self.email.validateEmail(){
-                self.error = "Invalid email"
-            } else {
-                self.error = ""
-            }
-        }
-    }
-    @ Published var error = ""
-}
-class PasswordValidationObj: ObservableObject{
-    @Published var pass = "" {
-        didSet{
-            self.isValidationPassword()
-        }
-    }
-    @Published var error = ""
-    
-    private func isValidationPassword(){
-        guard !self.pass.isEmpty else {
-            self.error = "Required"
-            return
-        }
-        let setPassError = self.pass.validatePassword() == false
-        if setPassError {
-            if self.pass.count < 6 {
-                self.error = "Must be at list 6 Characters"
-                return
-            }
-            if !self.pass.upperCase() {
-                self.error = "Must be contain at least one uppercase"
-                return
-            }
-            if !self.pass.lowerCase() {
-                self.error = "Must be contain at least one LowerCase"
-                return
-                
-            }
-            if !self.pass.containsCharacter(){
-                self.error = "Must be contain at least one special character"
-                return
-            }
-            if !self.pass.containsDigit(){
-                self.error = "Must be contains at least one digit "
-                return
-            }
-        } else {
-            self.error = ""
-        }
-    }
-}
-
-extension String {
-    func validateEmail() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        return applyPredicateOnRegex(regexStr: emailRegEx)
-    }
-    func validatePassword() -> Bool {
-        let passRegEx = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<]{6,}$"
-        return applyPredicateOnRegex(regexStr: passRegEx)
-        
-    }
-    func upperCase() -> Bool {
-        let uppercaseRegex = ".*[A-Z]+.*"
-        return applyPredicateOnRegex(regexStr: uppercaseRegex)
-    }
-    func lowerCase() -> Bool {
-        let lowercaseRegex = ".*[a-z]+.*"
-        return applyPredicateOnRegex(regexStr: lowercaseRegex)
-    }
-    func containsCharacter() -> Bool {
-        let containscharRegex = ".*[!@#$%^&*()\\-_=+{}|?>.<]+.*"
-        return applyPredicateOnRegex(regexStr: containscharRegex)
-    }
-    func containsDigit() -> Bool {
-        let digitRegex = ".*[0-9]+.*"
-        return applyPredicateOnRegex(regexStr: digitRegex)
-    }
-    func applyPredicateOnRegex(regexStr: String) -> Bool {
-        let trimmedString = self.trimmingCharacters(in: .whitespaces)
-        let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
-        let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
-        return isValidateOtherString
-    }
-    
-    func validateVeryfy(mini: Int = 4, max: Int = 6) -> Bool {
-//        var veryRegEx = ""
-//        if mini == max {
-//            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),}$"
-//        } else {
-//            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),\(max)}$"
+//class EmailValidationObj: ObservableObject {
+//    @Published var email = "" {
+//        didSet {
+//            if self.email.isEmpty {
+//                self.error = "Required"
+//                print("req")
+//            } else if !self.email.validateEmail(){
+//                self.error = "Invalid email"
+//            } else {
+//                self.error = ""
+//            }
 //        }
-        return applyPredicateOnRegex(regexStr: "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(4),\(6)}$")
-        
-    }
-    
-}
+//    }
+//    @ Published var error = ""
+//}
+//class PasswordValidationObj: ObservableObject{
+//   // @Published var cPass = ""
+//    @Published var pass = "" {
+//        didSet{
+//            self.isValidationPassword()
+//        }
+//    }
+//    @Published var error = ""
+//    
+//    private func isValidationPassword(){
+//        guard !self.pass.isEmpty else {
+//            self.error = "Required"
+//            return
+//        }
+//        let setPassError = self.pass.validatePassword() == false
+//        if setPassError {
+//            if self.pass.count < 6 {
+//                print("6 char")
+//                self.error = "Must be at list 6 Characters"
+//                return
+//            }
+//            if !self.pass.upperCase() {
+//                self.error = "Must be contain at least one uppercase"
+//                return
+//            }
+//            if !self.pass.lowerCase() {
+//                self.error = "Must be contain at least one LowerCase"
+//                return
+//                
+//            }
+//            if !self.pass.containsCharacter(){
+//                self.error = "Must be contain at least one special character"
+//                return
+//            }
+//            if !self.pass.containsDigit(){
+//                self.error = "Must be contains at least one digit "
+//                return
+//            }
+//        } else {
+//            self.error = ""
+//        }
+//    }
+//    
+//}
+//class ConfirmPasswordObj: ObservableObject{
+//    @Published var pass = ""
+//    @Published var cpass = ""{
+//        didSet{
+//            self.isConValidationPassword()
+//        }
+//    }
+//    @Published var error = ""
+//    
+//    private func isConValidationPassword(){
+//        guard !self.cpass.isEmpty else {
+//            print("require")
+//            self.error = "Required"
+//            return
+//           
+//        }
+//        if self.pass != self.cpass {
+//            print("notmatch")
+//            self.error = "please enter same password"
+//        } else if self.pass == self.cpass{
+//            print("matched")
+//            self.error = ""
+//            
+//        }
+//    }
+//}
+////class ConfirmPasswordObj: ObservableObject{
+////    @Published var pass = ""
+////    @Published var cpass = "" {
+////       didSet {
+////           if self.cpass.isEmpty {
+////               print("required")
+////                self.error = "Required"
+////           } else {
+////               if self.pass != self.cpass {
+////                print("enter same")
+////                self.error = "PLEASE ENTER same pass"
+////            } else  {
+////
+////               // print("else")
+////                self.error = ""
+////            }
+////            }
+////        }
+////
+////    }
+////    @ Published var error = ""
+////
+////}
+//
+//extension String {
+//    func validateEmail() -> Bool {
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+//        return applyPredicateOnRegex(regexStr: emailRegEx)
+//    }
+//    func validatePassword() -> Bool {
+//        let passRegEx = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<]{6,}$"
+//        return applyPredicateOnRegex(regexStr: passRegEx)
+//        
+//    }
+//    func upperCase() -> Bool {
+//        let uppercaseRegex = ".*[A-Z]+.*"
+//        return applyPredicateOnRegex(regexStr: uppercaseRegex)
+//    }
+//    func lowerCase() -> Bool {
+//        let lowercaseRegex = ".*[a-z]+.*"
+//        return applyPredicateOnRegex(regexStr: lowercaseRegex)
+//    }
+//    func containsCharacter() -> Bool {
+//        let containscharRegex = ".*[!@#$%^&*()\\-_=+{}|?>.<]+.*"
+//        return applyPredicateOnRegex(regexStr: containscharRegex)
+//    }
+//    func containsDigit() -> Bool {
+//        let digitRegex = ".*[0-9]+.*"
+//        return applyPredicateOnRegex(regexStr: digitRegex)
+//    }
+//    
+//    
+//    func applyPredicateOnRegex(regexStr: String) -> Bool {
+//        let trimmedString = self.trimmingCharacters(in: .whitespaces)
+//        let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
+//        let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
+//        return isValidateOtherString
+//    }
+//    
+//    func validateVeryfy(mini: Int = 4, max: Int = 6) -> Bool {
+////        var veryRegEx = ""
+////        if mini == max {
+////            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),}$"
+////        } else {
+////            veryRegEx = "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(mini),\(max)}$"
+////        }
+//        return applyPredicateOnRegex(regexStr: "^(?=.*[0-9])(?=.*\\d)[0-9\\d]{\(4),\(6)}$")
+//        
+//    }
+//    
+//}

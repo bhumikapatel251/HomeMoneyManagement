@@ -76,7 +76,14 @@ struct FilteringDetailView: View {
                 .frame(maxWidth:.infinity)
                 .background{
                     RoundedRectangle(cornerRadius: 15, style:.continuous)
-                        .fill(.white)
+                        .fill(
+                            .linearGradient(colors:[
+                                Color("HomColor"),
+                                Color("LPink"),
+                                Color("LPink"),
+                                Color("HomColor"),
+                            ], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        )
                     
                 }
                 .padding(.vertical,20)
