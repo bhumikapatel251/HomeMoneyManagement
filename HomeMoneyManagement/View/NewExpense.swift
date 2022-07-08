@@ -138,8 +138,10 @@ struct NewExpense: View {
             .frame(maxWidth: .infinity, alignment: .center)
             
             //Save
-            Button(action: {expenseViewModel.saveData(env: env)})
-            { Text("Save")
+            Button(action: {
+                expenseViewModel.saveData(env: env)
+            }, label: {
+                Text("Save")
                     .font(.title3)
                     .fontWeight((.semibold))
                     .padding(.vertical, 15)
@@ -154,14 +156,38 @@ struct NewExpense: View {
                                     Color("HomColor"),
                                 ], startPoint: .topLeading, endPoint: .bottomTrailing)
                             )
-                    }
-                    .foregroundColor(.white)
-                    .padding(.bottom,10)
+                        }
+                        .foregroundColor(.white)
+                        .padding(.bottom,10)
                 
-            }
-            .disabled(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "")
-            .opacity(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "" ? 0.6 : 1)
-            .padding(.vertical)
+                })
+//            Button(action: {
+//                expenseViewModel.saveData(env: env)
+//
+//            }) label:
+//            { Text("Save")
+//                    .font(.title3)
+//                    .fontWeight((.semibold))
+//                    .padding(.vertical, 15)
+//                    .frame(maxWidth: .infinity)
+//                    .background{
+//                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+//                            .fill(
+//                                .linearGradient(colors:[
+//                                    Color("HomColor"),
+//                                    Color("LPink"),
+//                                    Color("LPink"),
+//                                    Color("HomColor"),
+//                                ], startPoint: .topLeading, endPoint: .bottomTrailing)
+//                            )
+//                    }
+//                    .foregroundColor(.white)
+//                    .padding(.bottom,10)
+//
+//            }
+//            .disabled(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "")
+//            .opacity(expenseViewModel.remark == "" || expenseViewModel.type == .all || expenseViewModel.amount == "" ? 0.6 : 1)
+//            .padding(.vertical)
         }
         
         .padding()

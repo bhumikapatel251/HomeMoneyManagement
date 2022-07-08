@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FilteringDetailView: View {
-    @EnvironmentObject var expenseViewModel: ExpenseViewModel
+    @EnvironmentObject var expenseViewModel : ExpenseViewModel
     
     // environment Value set for backButton
     @Environment(\.self) var env
@@ -56,8 +56,8 @@ struct FilteringDetailView: View {
                 // Expense card view
                // ExpenseCard()
                   //  .environmentObject(expenseViewModel)
-                CustomSegmentedView()
-                    .environmentObject(expenseViewModel)
+                CustomSegmentedControl1()
+                    //.environmentObject(expenseViewModel)
                     .padding(.top)
                 
                 // filter date and amount
@@ -158,50 +158,51 @@ struct FilteringDetailView: View {
         .animation(.easeInOut, value: expenseViewModel.showFilterView)
     }
     //Custom segmentation control
-//    @ViewBuilder
-//    func CustomSegmentedControl()->some View{
-//        HStack(spacing: 0){
-//            ForEach([ExpenseType.income,ExpenseType.expense],id: \.rawValue){tab in
-//                Text(tab.rawValue)
-//                    .fontWeight(.semibold)
-//                    .foregroundColor(expenseViewModel.tabName == tab ? .white : .black)
-//                    .opacity(expenseViewModel.tabName == tab ? 1 : 0.7)
-//                    .padding(.vertical, 12)
-//                    .frame(maxWidth: .infinity)
-//
-//                    .background{
-//                        // Geomerty
-//                        if expenseViewModel.tabName == tab{
-//                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-//
-//                                .fill(
-//                                    .linearGradient(colors:[
-//                                        Color("G4"),
-//                                        Color("G5"),
-//                                        Color("G5"),
-//                                        Color("G4"),
-//                                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
-//                                )
-////                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-////                                .strokeBorder(.red)
-//
-//                                .matchedGeometryEffect(id: "TAB", in: animation)
-//                        }
-//
-//                    }
-//                    .contentShape(Rectangle())
-//                    .onTapGesture{
-//                        withAnimation{expenseViewModel.tabName = tab}
-//                    }
-//
-//            }
-//        }
-//        .padding(5)
-//        .background{
-//            RoundedRectangle(cornerRadius: 10, style: .continuous)
-//                .fill(.white)
-//        }
-//    }
+   @ViewBuilder
+        func CustomSegmentedControl1()->some View{
+            HStack(spacing: 0){
+                ForEach([ExpenseType.income,ExpenseType.expense],id: \.rawValue){tab in
+                    Text(tab.rawValue)
+            .fontWeight(.semibold)
+            .foregroundColor(expenseViewModel.tabName == tab ? .blue : .black)
+            .opacity(expenseViewModel.tabName == tab ? 1 : 0.7)
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity)
+           
+            .background{
+                // Geomerty
+                if expenseViewModel.tabName == tab{
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        
+                        .fill(Color("BG"))
+                           RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .strokeBorder(.blue)
+                    
+                        .matchedGeometryEffect(id: "TAB", in: animation)
+                }
+                
+            }
+            .contentShape(Rectangle())
+            .onTapGesture{
+                withAnimation{expenseViewModel.tabName = tab}
+            }
+        
+    }
+}
+.padding(5)
+.background{
+    RoundedRectangle(cornerRadius: 10, style: .continuous)
+       .fill(Color("BG"))
+//                .fill(
+//                    .linearGradient(colors:[
+//                        Color("HomColor"),
+//                        Color("LPink"),
+//                        Color("LPink"),
+//                        Color("HomColor"),
+//                    ], startPoint: .topLeading, endPoint: .bottomTrailing)
+//                )
+        }
+    }
 }
 
 struct FilteringDetailView_Previews: PreviewProvider {

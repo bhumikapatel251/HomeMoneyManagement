@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeMoneyManagementApp: App {
     var body: some Scene {
         WindowGroup {
-            FilteringDetailView()
+            ContentView()
         }
     }
 }

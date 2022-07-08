@@ -9,6 +9,7 @@ import SwiftUI
 
 class ExpenseViewModel: ObservableObject{
     //Properties
+    static let shared = ExpenseViewModel()
     @Published var startDate: Date = Date()
     @Published var endDate: Date = Date()
     @Published var currentMonthStartDate: Date = Date()
@@ -82,7 +83,14 @@ class ExpenseViewModel: ObservableObject{
         
         let amountInDouble = (amount as NSString).doubleValue
         let colors = ["Yellow", "Red", "Purple", "G2"]
-        let expense = Expense(category: category, remark: remark, amount: amountInDouble, date: date, type: type, color: colors.randomElement() ?? "Yellow")
+        let newexpense = Expense(category: category, remark: remark, amount: amountInDouble, date: date, type: type, color: colors.randomElement() ?? "Yellow")
+        
+        withAnimation{expense.append(newexpense)
+            expense = expense.sorted(by: { first, scnd in
+                return scnd.date < first.date
+            })
+            env.dismiss()
+        }
 //        expense = expense.sorted(by: { first, scnd in
 //            return scnd.date < first.date
 //        })
