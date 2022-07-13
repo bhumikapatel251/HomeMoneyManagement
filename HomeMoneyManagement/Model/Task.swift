@@ -1,16 +1,66 @@
 //
 //  Task.swift
-//  HomeMoneyManagement
+//  TaskManager
 //
-//  Created by Bhumika Patel on 24/05/22.
+//  Created by Mohammad Yasir on 13/04/21.
 //
 
+import Foundation
 import SwiftUI
 
-enum TaskType: String, CaseIterable{
-    case Daily = "Daily"
-    case Calendar = "Calendar"
-    case Weekly = "Weekly"
-    case Monthly = "Monthly"
-    case Total = "Total"
+struct Task : Identifiable , Equatable {
+    
+    var id : String = UUID().uuidString
+    let name : String
+    let taskName : String
+    let date : Date
+    let priority : Priority
+    
 }
+
+enum Priority : Int , Identifiable , CaseIterable {
+    
+    var id : Int { rawValue }
+    
+    case normal
+    case medium
+    case high
+    
+    var title : String {
+        
+        switch self {
+        case .normal :
+            return "Normal"
+        case .medium :
+            return "Medium"
+        case .high :
+            return "High"
+        }
+        
+    }
+    
+    var color : Color {
+        
+        switch self {
+        case .normal:
+            return .white
+        case .medium:
+            return .orange
+        case .high :
+            return .red
+        }
+    }
+    
+}
+
+enum SortType : String , Identifiable , CaseIterable {
+    
+    var id : String { rawValue }
+    
+    case alphabetical
+    case date
+    case priority
+    
+}
+
+

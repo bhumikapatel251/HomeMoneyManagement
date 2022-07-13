@@ -13,12 +13,15 @@ struct NewExpense: View {
     // environment value set for closed
     @Environment(\.self) var env
     @Namespace var animation
+    @State var isIncome = false
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        VStack{
+            AppBAr()
+            ScrollView(.vertical, showsIndicators: false){
             VStack(spacing: 15){
             HStack(spacing: 15){
                 VStack(alignment: .leading, spacing: 4){
-                    Text("Add")
+                    Text("Add Transaction")
                         .font(.title2)
                         .fontWeight(.bold)
                         .opacity(0.7)
@@ -65,7 +68,7 @@ struct NewExpense: View {
                                     }
                         
                             }
-                            .padding(.vertical,10)
+                            .padding(.vertical,15)
                             .frame(maxWidth: .infinity)
                             .background{
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -190,12 +193,13 @@ struct NewExpense: View {
 //            .padding(.vertical)
         }
         
-        .padding()
-        .background{
-            Color("BG")
-                .ignoresSafeArea()
+            .padding()
+            .background{
+                Color("BG")
+                    .ignoresSafeArea()
+            }
+            .padding(.vertical, -340)
         }
-        
     }
    
 }

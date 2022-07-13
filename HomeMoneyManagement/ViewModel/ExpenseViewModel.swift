@@ -82,8 +82,8 @@ class ExpenseViewModel: ObservableObject{
         print("Save")
         
         let amountInDouble = (amount as NSString).doubleValue
-        let colors = ["Yellow", "Red", "Purple", "G2"]
-        let newexpense = Expense(category: category, remark: remark, amount: amountInDouble, date: date, type: type, color: colors.randomElement() ?? "Yellow")
+        //let colors = ["Yellow", "Red", "Purple", "G2"]
+        let newexpense = Expense(category: category, remark: remark, amount: amountInDouble, date: date, type: tabName)
         
         withAnimation{expense.append(newexpense)
             expense = expense.sorted(by: { first, scnd in
@@ -95,6 +95,9 @@ class ExpenseViewModel: ObservableObject{
 //            return scnd.date < first.date
 //        })
 //        env.dismiss()
+    }
+    func removeExpense(indexAt : IndexSet){
+        expense.remove(atOffsets: indexAt)
     }
     
 }

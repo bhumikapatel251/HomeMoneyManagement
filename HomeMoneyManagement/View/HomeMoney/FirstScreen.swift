@@ -49,11 +49,11 @@ struct FirstScreen: View {
 //                                   .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
 //
 //                    }
-                    Button{
-                               
+                    NavigationLink{
+                        //TaskMainView()//.environmentObject(TaskViewModel())
                     } label: {
-                               Image(systemName: "slider.horizontal.3")
-                                   .foregroundColor(.gray)
+                               Image(systemName: "waveform.path.ecg")
+                                   .foregroundColor(.black)
                                    .frame(width: 30, height: 30)
                                    .background(Color.white,in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                                    .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
@@ -78,10 +78,14 @@ struct FirstScreen: View {
                     .opacity(0.7)
                     .frame(maxWidth: .infinity,alignment: .leading)
                     .padding(.bottom,1)
-                ScrollView(.vertical, showsIndicators: false){
-                    
-                    TransactionView()
+                VStack{
+                    ScrollView(.vertical, showsIndicators: false){
+                        TransactionView()
+                        //TransactionList(expenseViewModel: ExpenseViewModel())
+                    }
+                    //.background(Color.white)
                 }
+                .padding(.horizontal,-10)
             }
             .padding(.leading,10)
             .padding(.trailing,10)
@@ -132,17 +136,22 @@ struct FirstScreen: View {
     @ViewBuilder
     func TransactionView()->some View{
         VStack(spacing: 15){
-            
-            
-            ForEach(expenseViewModel.expense){expense in
+
+
+                ForEach(expenseViewModel.expense){expense in
                 // Trasactioncard
-                
-                TransactionCardView(expense: expense)
-                    .environmentObject(expenseViewModel)
-            }
+
+                    TransactionCardView(expense: expense)
+                        .environmentObject(expenseViewModel)
+                }
+                .onDelete(perform: {
+                    expenseViewModel.removeExpense(indexAt: $0)
+                })
+
         }
         .padding(.top)
-        
+        .padding()
+
     }
     
     //Task

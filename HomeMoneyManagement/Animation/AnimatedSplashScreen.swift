@@ -66,7 +66,7 @@ struct AnimatedSplashScreen<Content: View>: View {
                                     Color.yellow
                                     
                                 }else if self.index == 2{
-                                    Color.blue
+                                    TaskMainView()
                                 }else {
                                     Color.orange
                                 }
@@ -141,7 +141,7 @@ struct CircleTab : View {
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                            .foregroundColor(Color.black.opacity(0.2))
+                            .foregroundColor(Color.black.opacity(0.7))
                     } else {
                         Image("Trans")
                             .resizable()
@@ -166,7 +166,7 @@ struct CircleTab : View {
                             .offset(y: -20)
                             .padding(.bottom, -10)
                         
-                        Text("Trans.").foregroundColor(Color.purple.opacity(0.7))
+                        Text("Trans.").foregroundColor(Color.black.opacity(0.7))
                             .offset(y: -20)
                            
                     }
@@ -191,7 +191,7 @@ struct CircleTab : View {
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                            .foregroundColor(Color.black.opacity(0.2))
+                            .foregroundColor(Color.black.opacity(0.7))
                     } else {
                         Image("Chart")
                             .resizable()
@@ -216,7 +216,7 @@ struct CircleTab : View {
                             .offset(y: -20)
                             .padding(.bottom, -10)
                         
-                        Text("Chart.").foregroundColor(Color.purple.opacity(0.7))
+                        Text("Chart.").foregroundColor(Color.black.opacity(0.7))
                             .offset(y: -20)
                            
                     }
@@ -233,14 +233,14 @@ struct CircleTab : View {
                     
                     if self.index != 2 {
                         
-                        Image("Base")
+                        Image(systemName: "waveform.path.ecg")
                             .resizable()
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                            .foregroundColor(Color.black.opacity(0.2))
+                            .foregroundColor(Color.black.opacity(0.7))
                     } else {
-                        Image("Base")
+                        Image(systemName: "waveform.path.ecg")
                             .resizable()
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
@@ -263,7 +263,7 @@ struct CircleTab : View {
                             .offset(y: -20)
                             .padding(.bottom, -10)
                         
-                        Text("Account.").foregroundColor(Color.purple.opacity(0.7))
+                        Text("Task.").foregroundColor(Color.black.opacity(0.7))
                             .offset(y: -20)
                             
                            
@@ -286,7 +286,7 @@ struct CircleTab : View {
                             .renderingMode(.template)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                            .foregroundColor(Color.black.opacity(0.2))
+                            .foregroundColor(Color.black.opacity(0.7))
                     } else {
                         Image("More")
                             .resizable()
@@ -311,7 +311,7 @@ struct CircleTab : View {
                             .offset(y: -20)
                             .padding(.bottom, -10)
                         
-                        Text("More.").foregroundColor(Color.purple.opacity(0.7))
+                        Text("More.").foregroundColor(Color.black.opacity(0.7))
                             .offset(y: -20)
                         
                            
@@ -323,7 +323,7 @@ struct CircleTab : View {
         }
         .padding(.vertical, -5)
         .padding(.horizontal,20 )
-        .background(Color.white)
+        .background(Color("HomColor"))
         .animation(.spring())
     }
 }

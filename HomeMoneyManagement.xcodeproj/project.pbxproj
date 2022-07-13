@@ -17,6 +17,18 @@
 		AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6586552845FF2800E61423 /* CircleTabBar.swift */; };
 		AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761202840A9380032A8A1 /* NewExpense.swift */; };
 		AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */; };
+		AC78FDDC287948850090F2F4 /* AppBAr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDDB287948850090F2F4 /* AppBAr.swift */; };
+		AC78FDE2287961190090F2F4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDE1287961190090F2F4 /* Task.swift */; };
+		AC78FDE42879613C0090F2F4 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDE32879613C0090F2F4 /* TaskViewModel.swift */; };
+		AC78FDE62879614B0090F2F4 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDE52879614B0090F2F4 /* TaskListView.swift */; };
+		AC78FDE8287961550090F2F4 /* SortPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDE7287961550090F2F4 /* SortPickerView.swift */; };
+		AC78FDEA2879615E0090F2F4 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDE92879615E0090F2F4 /* AddTaskView.swift */; };
+		AC78FDEC287961650090F2F4 /* TaskSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDEB287961650090F2F4 /* TaskSearchView.swift */; };
+		AC78FDEE2879617E0090F2F4 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDED2879617E0090F2F4 /* TaskView.swift */; };
+		AC78FDF0287961A20090F2F4 /* MainViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDEF287961A20090F2F4 /* MainViewModifier.swift */; };
+		AC78FDF2287961B80090F2F4 /* KeyBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDF1287961B80090F2F4 /* KeyBoardExtension.swift */; };
+		AC78FDF4287962090090F2F4 /* TaskMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDF3287962090090F2F4 /* TaskMainView.swift */; };
+		AC9B717D287D4FAE0063C765 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B717C287D4FAE0063C765 /* TransactionList.swift */; };
 		ACA9A3EC28520BEB00AF3D6C /* UIAlertcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9A3EB28520BEB00AF3D6C /* UIAlertcontroller.swift */; };
 		ACAFDE372848D198005EE8B6 /* NewIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAFDE362848D198005EE8B6 /* NewIncome.swift */; };
 		ACB509DF283CCD43005C07FD /* HomeMoneyManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */; };
@@ -28,7 +40,6 @@
 		ACB509FC283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */; };
 		ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */; };
 		ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */; };
-		ACB50A0F283CE774005C07FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB50A0E283CE774005C07FD /* Task.swift */; };
 		ACE519772876E12E0074C4DE /* INEXPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE519762876E12E0074C4DE /* INEXPickerView.swift */; };
 		ACF3AE13287407C700B74EE9 /* AnimatedSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3AE12287407C700B74EE9 /* AnimatedSplashScreen.swift */; };
 		ACF3AE1628741CE900B74EE9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3AE1528741CE900B74EE9 /* Extension.swift */; };
@@ -68,6 +79,18 @@
 		AC6586552845FF2800E61423 /* CircleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTabBar.swift; sourceTree = "<group>"; };
 		AC7761202840A9380032A8A1 /* NewExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpense.swift; sourceTree = "<group>"; };
 		AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
+		AC78FDDB287948850090F2F4 /* AppBAr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBAr.swift; sourceTree = "<group>"; };
+		AC78FDE1287961190090F2F4 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AC78FDE32879613C0090F2F4 /* TaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		AC78FDE52879614B0090F2F4 /* TaskListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		AC78FDE7287961550090F2F4 /* SortPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortPickerView.swift; sourceTree = "<group>"; };
+		AC78FDE92879615E0090F2F4 /* AddTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		AC78FDEB287961650090F2F4 /* TaskSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchView.swift; sourceTree = "<group>"; };
+		AC78FDED2879617E0090F2F4 /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		AC78FDEF287961A20090F2F4 /* MainViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModifier.swift; sourceTree = "<group>"; };
+		AC78FDF1287961B80090F2F4 /* KeyBoardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoardExtension.swift; sourceTree = "<group>"; };
+		AC78FDF3287962090090F2F4 /* TaskMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMainView.swift; sourceTree = "<group>"; };
+		AC9B717C287D4FAE0063C765 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		ACA9A3EB28520BEB00AF3D6C /* UIAlertcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertcontroller.swift; sourceTree = "<group>"; };
 		ACAFDE362848D198005EE8B6 /* NewIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIncome.swift; sourceTree = "<group>"; };
 		ACB509DB283CCD43005C07FD /* HomeMoneyManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMoneyManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +105,6 @@
 		ACB509FB283CCD43005C07FD /* HomeMoneyManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoneyManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlashScreen.swift; sourceTree = "<group>"; };
 		ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
-		ACB50A0E283CE774005C07FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ACE519762876E12E0074C4DE /* INEXPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INEXPickerView.swift; sourceTree = "<group>"; };
 		ACF3AE12287407C700B74EE9 /* AnimatedSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSplashScreen.swift; sourceTree = "<group>"; };
 		ACF3AE1528741CE900B74EE9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -132,10 +154,11 @@
 		AC5708C1283F83050013F420 /* GradientView */ = {
 			isa = PBXGroup;
 			children = (
-				AC5708C4283F834F0013F420 /* ExpenseCard.swift */,
 				AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */,
+				AC5708C4283F834F0013F420 /* ExpenseCard.swift */,
 				ACFF14E928421BB30054E07F /* CustomCorner.swift */,
 				ACE519762876E12E0074C4DE /* INEXPickerView.swift */,
+				AC78FDDB287948850090F2F4 /* AppBAr.swift */,
 			);
 			path = GradientView;
 			sourceTree = "<group>";
@@ -143,10 +166,38 @@
 		AC57626B283E19E60050A4F4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AC78FDE32879613C0090F2F4 /* TaskViewModel.swift */,
 				AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */,
 				ACFF14DD2842152C0054E07F /* LoginScreenModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC78FDDD28795ECD0090F2F4 /* HomeMoney */ = {
+			isa = PBXGroup;
+			children = (
+				AC7761202840A9380032A8A1 /* NewExpense.swift */,
+				ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */,
+				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
+				AC9B717C287D4FAE0063C765 /* TransactionList.swift */,
+				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
+			);
+			path = HomeMoney;
+			sourceTree = "<group>";
+		};
+		AC78FDDE28795EE40090F2F4 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				AC78FDF1287961B80090F2F4 /* KeyBoardExtension.swift */,
+				AC78FDEF287961A20090F2F4 /* MainViewModifier.swift */,
+				AC78FDED2879617E0090F2F4 /* TaskView.swift */,
+				AC78FDE52879614B0090F2F4 /* TaskListView.swift */,
+				AC78FDEB287961650090F2F4 /* TaskSearchView.swift */,
+				AC78FDE92879615E0090F2F4 /* AddTaskView.swift */,
+				AC78FDE7287961550090F2F4 /* SortPickerView.swift */,
+				AC78FDF3287962090090F2F4 /* TaskMainView.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 		ACB509D2283CCD43005C07FD = {
@@ -183,6 +234,7 @@
 				ACB509E4283CCD43005C07FD /* Preview Content */,
 				ACB50A0C283CE6E2005C07FD /* View */,
 				ACB509DE283CCD43005C07FD /* HomeMoneyManagementApp.swift */,
+				ACB509E0283CCD43005C07FD /* ContentView.swift */,
 			);
 			path = HomeMoneyManagement;
 			sourceTree = "<group>";
@@ -216,16 +268,13 @@
 			isa = PBXGroup;
 			children = (
 				AC5708C1283F83050013F420 /* GradientView */,
-				ACB50A0A283CE5CE005C07FD /* FirstScreen.swift */,
+				AC78FDDE28795EE40090F2F4 /* Task */,
+				AC78FDDD28795ECD0090F2F4 /* HomeMoney */,
 				ACB50A08283CDE1B005C07FD /* HomeFlashScreen.swift */,
-				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
-				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
-				AC7761202840A9380032A8A1 /* NewExpense.swift */,
 				ACFF14DF284215740054E07F /* LoginScreen.swift */,
 				AC576267283E01AE0050A4F4 /* TabCurveView.swift */,
 				AC6586552845FF2800E61423 /* CircleTabBar.swift */,
 				ACAFDE362848D198005EE8B6 /* NewIncome.swift */,
-				ACB509E0283CCD43005C07FD /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,7 +282,7 @@
 		ACB50A0D283CE728005C07FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ACB50A0E283CE774005C07FD /* Task.swift */,
+				AC78FDE1287961190090F2F4 /* Task.swift */,
 				AC57626C283E1A020050A4F4 /* Expense.swift */,
 			);
 			path = Model;
@@ -398,8 +447,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC78FDF2287961B80090F2F4 /* KeyBoardExtension.swift in Sources */,
+				AC78FDEA2879615E0090F2F4 /* AddTaskView.swift in Sources */,
 				AC57626D283E1A020050A4F4 /* Expense.swift in Sources */,
 				AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */,
+				AC78FDEE2879617E0090F2F4 /* TaskView.swift in Sources */,
+				AC78FDF0287961A20090F2F4 /* MainViewModifier.swift in Sources */,
 				AC57626F283E1CB50050A4F4 /* ExpenseViewModel.swift in Sources */,
 				ACB50A0B283CE5CE005C07FD /* FirstScreen.swift in Sources */,
 				ACFF14EA28421BB30054E07F /* CustomCorner.swift in Sources */,
@@ -410,11 +463,18 @@
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
 				AC0FA9FD2850AAA300707CFA /* ValidationExtension.swift in Sources */,
 				AC5708C5283F834F0013F420 /* ExpenseCard.swift in Sources */,
+				AC78FDE2287961190090F2F4 /* Task.swift in Sources */,
 				ACFF14DE2842152C0054E07F /* LoginScreenModel.swift in Sources */,
+				AC78FDDC287948850090F2F4 /* AppBAr.swift in Sources */,
 				ACE519772876E12E0074C4DE /* INEXPickerView.swift in Sources */,
-				ACB50A0F283CE774005C07FD /* Task.swift in Sources */,
+				AC78FDE8287961550090F2F4 /* SortPickerView.swift in Sources */,
 				AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */,
+				AC78FDEC287961650090F2F4 /* TaskSearchView.swift in Sources */,
+				AC78FDF4287962090090F2F4 /* TaskMainView.swift in Sources */,
 				ACF3AE1628741CE900B74EE9 /* Extension.swift in Sources */,
+				AC78FDE42879613C0090F2F4 /* TaskViewModel.swift in Sources */,
+				AC9B717D287D4FAE0063C765 /* TransactionList.swift in Sources */,
+				AC78FDE62879614B0090F2F4 /* TaskListView.swift in Sources */,
 				ACB50A09283CDE1B005C07FD /* HomeFlashScreen.swift in Sources */,
 				AC576268283E01AE0050A4F4 /* TabCurveView.swift in Sources */,
 				AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */,

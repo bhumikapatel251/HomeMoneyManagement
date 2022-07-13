@@ -14,7 +14,7 @@ struct Expense: Identifiable,Hashable{
     var amount: Double
     var date: Date
     var type: ExpenseType
-    var color: String
+  //  var color: String
     
 }
 enum ExpenseType: String{
@@ -24,9 +24,9 @@ enum ExpenseType: String{
 }
  
 var sample_expense: [Expense] = [
-    Expense(category: "Magic Keyboard", remark: "none cfsdfcdsds d cdkls", amount: 99, date: Date(timeIntervalSince1970: 1652987245), type: .expense, color: "Yellow"),
-    Expense(category: "Food", remark: "none", amount: 19, date: Date(timeIntervalSince1970: 1652814445), type: .expense, color: "Red"),
-    Expense(category: "Stock", remark: "none", amount: 159, date: Date(timeIntervalSince1970: 1652036845), type: .expense, color: "purple"),
-    Expense(category: "Salary", remark: "none", amount: 15000, date: Date(timeIntervalSince1970: 1652036845), type: .income, color: "Blue"),
-    Expense(category: "Cash", remark: "none", amount: 500, date: Date(timeIntervalSince1970: 1652814445), type: .income, color: "G4")
+    Expense(category: "Magic Keyboard", remark: "none cfsdfcdsds d cdkls", amount: 99, date: Date(timeIntervalSince1970: 1652987245), type: .expense),
+    Expense(category: "Food", remark: "none", amount: 19, date: Date(timeIntervalSince1970: 1652814445), type: .expense),
+    Expense(category: "Stock", remark: "none", amount: 159, date: Date(timeIntervalSince1970: 1652036845), type: .expense),
+    Expense(category: "Salary", remark: "none", amount: 15000, date: Date(timeIntervalSince1970: 1652036845), type: .income),
+    Expense(category: "Cash", remark: "none", amount: 500, date: Date(timeIntervalSince1970: 1652814445), type: .income)
 ]

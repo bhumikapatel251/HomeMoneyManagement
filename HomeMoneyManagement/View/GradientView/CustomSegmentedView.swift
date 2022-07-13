@@ -10,8 +10,10 @@ import SwiftUI
 struct CustomSegmentedView: View {
     @EnvironmentObject var expenseViewModel: ExpenseViewModel
     @Namespace var animation
+    @State var isIncome = false
     var body: some View {
         HStack(spacing: 0){
+           
             ForEach([ExpenseType.income,ExpenseType.expense],id: \.rawValue){tab in
                 Text(tab.rawValue)
                     .fontWeight(.semibold)

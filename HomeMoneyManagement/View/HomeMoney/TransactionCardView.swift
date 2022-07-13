@@ -13,26 +13,29 @@ struct TransactionCardView: View {
     var body: some View {
         HStack(spacing: 12){
             // first latter avtar
-            if let first = expense.category.first{
-                Text(String(first))
-                    .font(.title.bold())
-                    .foregroundColor(.white)
-                    .frame(width:50, height: 50)
-                    .background{
-                        Circle()
-                            .fill(Color(expense.color))
-                    }
-                    .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
-            }
-            VStack(alignment: .trailing, spacing: 7){
-            Text(expense.category)
+//            if let first = expense.category.first{
+//                Text(String(first))
+//                    .font(.title.bold())
+//                    .foregroundColor(.white)
+//                    .frame(width:50, height: 50)
+////                    .background{
+////                        Circle()
+////                            .fill(Color(expense.color))
+////                    }
+//                    .shadow(color: .black.opacity(0.08), radius: 5, x: 5, y: 5)
+//            }
+            VStack(alignment: .leading, spacing: 7){
+            
+                Text(expense.remark)
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text(expense.remark)
+                
+                Text(expense.category)
                 .foregroundColor(.black)
                 .font(.caption)
-                .opacity(0.5)
+                .opacity(0.7)
+              
             }
             
             
@@ -50,12 +53,13 @@ struct TransactionCardView: View {
             }
         }
         .padding()
+        
         .background{
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .fill(.white)
-            
+
         }
-        
+
     }
 }
 

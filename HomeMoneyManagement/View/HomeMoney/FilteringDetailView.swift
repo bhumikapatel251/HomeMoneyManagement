@@ -14,7 +14,10 @@ struct FilteringDetailView: View {
     @Environment(\.self) var env
     @Namespace var animation
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        VStack{
+            AppBAr()
+            
+            ScrollView(.vertical, showsIndicators: false){
             VStack(spacing: 15){
                 HStack(spacing:15){
                     // Back Button
@@ -99,13 +102,16 @@ struct FilteringDetailView: View {
             }
             .padding()
         }
-        .navigationBarHidden(true)
-        .background{
-            Color("BG")
-                .ignoresSafeArea()
-        }
-        .overlay{
-            FilterView()
+           
+            .navigationBarHidden(true)
+            .background{
+                Color("BG")
+                    .ignoresSafeArea()
+            }
+            .overlay{
+                FilterView()
+            }
+            .padding(.vertical,-340)
         }
     }
     //filterview
