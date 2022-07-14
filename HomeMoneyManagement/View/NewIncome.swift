@@ -243,7 +243,7 @@ struct NewIncome: View {
                                                     .foregroundColor(.red)
                                                 }),
                                 trailing: Button(action:{
-                                    expenseViewModel.saveData(env: env)
+                                   // expenseViewModel.saveData(env: env)
                                     //taskVM.addTask(task: .init(name: name, taskName: taskName, date: date, priority: priority))
                                                     presentationMode.wrappedValue.dismiss()},
                                                    label:{

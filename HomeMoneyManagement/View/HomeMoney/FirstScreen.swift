@@ -79,10 +79,10 @@ struct FirstScreen: View {
                     .frame(maxWidth: .infinity,alignment: .leading)
                     .padding(.bottom,1)
                 VStack{
-                    ScrollView(.vertical, showsIndicators: false){
+                   // ScrollView(.vertical, showsIndicators: false){
                         TransactionView()
                         //TransactionList(expenseViewModel: ExpenseViewModel())
-                    }
+                  //  }
                     //.background(Color.white)
                 }
                 .padding(.horizontal,-10)
@@ -136,21 +136,32 @@ struct FirstScreen: View {
     @ViewBuilder
     func TransactionView()->some View{
         VStack(spacing: 15){
-
-
+            List {
                 ForEach(expenseViewModel.expense){expense in
                 // Trasactioncard
-
+                
                     TransactionCardView(expense: expense)
                         .environmentObject(expenseViewModel)
                 }
                 .onDelete(perform: {
                     expenseViewModel.removeExpense(indexAt: $0)
                 })
+               
+            }.listStyle(InsetListStyle())
+
+//                ForEach(expenseViewModel.expense){expense in
+//                // Trasactioncard
+//
+//                    TransactionCardView(expense: expense)
+//                        .environmentObject(expenseViewModel)
+//                }
+//                .onDelete(perform: {
+//                    expenseViewModel.removeExpense(indexAt: $0)
+//                })
 
         }
-        .padding(.top)
-        .padding()
+        .padding(.top,-1)
+        .padding(.horizontal,-10)
 
     }
     
