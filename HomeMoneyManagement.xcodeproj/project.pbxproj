@@ -15,6 +15,7 @@
 		AC57626F283E1CB50050A4F4 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */; };
 		AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC576270283E3DE50050A4F4 /* TransactionCardView.swift */; };
 		AC6586562845FF2800E61423 /* CircleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6586552845FF2800E61423 /* CircleTabBar.swift */; };
+		AC76565728802ECE005B917A /* TransactionSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76565628802ECE005B917A /* TransactionSearchView.swift */; };
 		AC7761212840A9380032A8A1 /* NewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761202840A9380032A8A1 /* NewExpense.swift */; };
 		AC7761232840B4900032A8A1 /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */; };
 		AC78FDDC287948850090F2F4 /* AppBAr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78FDDB287948850090F2F4 /* AppBAr.swift */; };
@@ -77,6 +78,7 @@
 		AC57626E283E1CB50050A4F4 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		AC576270283E3DE50050A4F4 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		AC6586552845FF2800E61423 /* CircleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTabBar.swift; sourceTree = "<group>"; };
+		AC76565628802ECE005B917A /* TransactionSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSearchView.swift; sourceTree = "<group>"; };
 		AC7761202840A9380032A8A1 /* NewExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpense.swift; sourceTree = "<group>"; };
 		AC7761222840B4900032A8A1 /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
 		AC78FDDB287948850090F2F4 /* AppBAr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBAr.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				AC576270283E3DE50050A4F4 /* TransactionCardView.swift */,
 				AC9B717C287D4FAE0063C765 /* TransactionList.swift */,
 				AC5708CA283F94B30013F420 /* FilteringDetailView.swift */,
+				AC76565628802ECE005B917A /* TransactionSearchView.swift */,
 			);
 			path = HomeMoney;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				ACAFDE372848D198005EE8B6 /* NewIncome.swift in Sources */,
 				AC576271283E3DE50050A4F4 /* TransactionCardView.swift in Sources */,
 				ACFF14E0284215740054E07F /* LoginScreen.swift in Sources */,
+				AC76565728802ECE005B917A /* TransactionSearchView.swift in Sources */,
 				ACA9A3EC28520BEB00AF3D6C /* UIAlertcontroller.swift in Sources */,
 				ACB509E1283CCD43005C07FD /* ContentView.swift in Sources */,
 				AC0FA9FD2850AAA300707CFA /* ValidationExtension.swift in Sources */,

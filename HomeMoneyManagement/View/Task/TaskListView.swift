@@ -13,6 +13,7 @@ struct TaskListView: View {
     
     var body: some View {
         List {
+            Section(header: Text("Tasks")){
             ForEach (taskVM.tasks.filter {
                         self.taskVM.searched.isEmpty ? true : $0.name.localizedCapitalized.contains(self.taskVM.searched)} ){ task in
                 TaskView(task: task)
@@ -20,6 +21,7 @@ struct TaskListView: View {
             .onDelete(perform: {
                 taskVM.removeTask(indexAt: $0)
             })
+            }
         }.listStyle(InsetListStyle())
         
     }

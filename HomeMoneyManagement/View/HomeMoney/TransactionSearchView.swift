@@ -1,17 +1,15 @@
 //
-//  TaskSearchView.swift
-//  TaskManager
+//  TransactionSearchView.swift
+//  HomeMoneyManagement
 //
-//  Created by Mohammad Yasir on 13/04/21.
+//  Created by Bhumika Patel on 14/07/22.
 //
 
 import SwiftUI
 
-struct TaskSearchView: View {
-    
-    @ObservedObject var taskVM : TaskViewModel
+struct TransactionSearchView: View {
+    @ObservedObject var expenseViewModel : ExpenseViewModel
     @State var isSearching = false
-    
     var body: some View {
         HStack {
             ZStack {
@@ -21,7 +19,7 @@ struct TaskSearchView: View {
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                    TextField("Search ...", text: $taskVM.searched , onEditingChanged: { (isBegin) in
+                    TextField("Search ...", text: $expenseViewModel.searched , onEditingChanged: { (isBegin) in
                         if isBegin {
                             isSearching = true
                         } else {
@@ -30,9 +28,9 @@ struct TaskSearchView: View {
                     }).keyboardType(.webSearch)
                     .foregroundColor(.black)
                     
-                    if taskVM.searched != "" {
+                    if expenseViewModel.searched != "" {
                         Button(action: {
-                            taskVM.searched = ""
+                            expenseViewModel.searched = ""
                         }) {
                             Image(systemName: "xmark.circle.fill")
                                 .foregroundColor(Color(#colorLiteral(red: 0.5446127653, green: 0.5465545654, blue: 0.5666400194, alpha: 1)))
@@ -62,10 +60,8 @@ struct TaskSearchView: View {
     }
 }
 
-struct TaskSearchView_Previews: PreviewProvider {
+struct TransactionSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskSearchView(taskVM: TaskViewModel())
+        TransactionSearchView(expenseViewModel: ExpenseViewModel())
     }
 }
-
-

@@ -28,6 +28,7 @@ class ExpenseViewModel: ObservableObject{
     @Published var date: Date = Date()
     @Published var remark: String = ""
     @Published var category: String = ""
+    @Published var searched = ""
     
     init(){
         //fetching current month starting date

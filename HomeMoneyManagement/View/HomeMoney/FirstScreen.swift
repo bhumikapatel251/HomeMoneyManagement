@@ -60,6 +60,8 @@ struct FirstScreen: View {
                     }
 
                 }
+                .padding()
+                TransactionSearchView(expenseViewModel: expenseViewModel)
 //                ScrollView(.horizontal, showsIndicators: false){
 //                            HStack(spacing:18){
 //                                ForEach(TaskType.allCases,id: \.self){type in
@@ -68,16 +70,17 @@ struct FirstScreen: View {
 //                            }
 //                            .padding(.horizontal, 25)
 //                        }
-                        .padding(.top, 28)
+                        .padding(.top,-10)
+                        .padding(.horizontal,-14)
                            
                     ExpenseCard()
                     .environmentObject(expenseViewModel)
                 
-                Text("Transaction")
-                    .font(.title2.bold())
-                    .opacity(0.7)
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                    .padding(.bottom,1)
+//                Text("Transaction")
+//                    .font(.title2.bold())
+//                    .opacity(0.7)
+//                    .frame(maxWidth: .infinity,alignment: .leading)
+//                    .padding(.bottom,1)
                 VStack{
                    // ScrollView(.vertical, showsIndicators: false){
                         TransactionView()
@@ -85,7 +88,7 @@ struct FirstScreen: View {
                   //  }
                     //.background(Color.white)
                 }
-                .padding(.horizontal,-10)
+                .padding(.horizontal, -10)
             }
             .padding(.leading,10)
             .padding(.trailing,10)
@@ -137,18 +140,24 @@ struct FirstScreen: View {
     func TransactionView()->some View{
         VStack(spacing: 15){
             List {
-                ForEach(expenseViewModel.expense){expense in
-                // Trasactioncard
+                  Section(
+                       header: Text("Transaction")){
+                           ForEach(expenseViewModel.expense.filter {
+                               self.expenseViewModel.searched.isEmpty ? true : $0.remark.localizedCapitalized.contains(self.expenseViewModel.searched)
+                           }){expense in
+                                // Trasactioncard
                 
-                    TransactionCardView(expense: expense)
-                        .environmentObject(expenseViewModel)
-                }
-                .onDelete(perform: {
-                    expenseViewModel.removeExpense(indexAt: $0)
-                })
-               
-            }.listStyle(InsetListStyle())
-
+                            TransactionCardView(expense: expense)
+                                .environmentObject(expenseViewModel)
+                      }
+                      .onDelete(perform: {
+                           expenseViewModel.removeExpense(indexAt: $0)
+                   })
+               }
+            }
+            
+            .listStyle(InsetListStyle())
+                
 //                ForEach(expenseViewModel.expense){expense in
 //                // Trasactioncard
 //
@@ -158,8 +167,9 @@ struct FirstScreen: View {
 //                .onDelete(perform: {
 //                    expenseViewModel.removeExpense(indexAt: $0)
 //                })
-
+                
         }
+        .accentColor(.blue)
         .padding(.top,-1)
         .padding(.horizontal,-10)
 
